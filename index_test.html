@@ -137,15 +137,14 @@
 	<button onclick="GWASFunction()" class="dropbtn" style="margin-left:50px">GWAS Studies</button>
 	<div id="GWASDropdown" class="dropdown-content">
 	  <input type="text" placeholder="Search.." id="GWASInput" onkeyup="filterGWAS()" class="Input">
-	  <div id="gwas">
-	  </div>  
+      <a onclick="plot.addPanel(extra_panel_layout_assoc_45)">DIAGRAM 1000G T2D meta-analysis</a>
     </div>
     </div>
 </td>
 </tr>
 <tr>
   <td>
-    <span><h6>Upload your Chromatin Study Track    <a href="http://www.apps.t2depigenome.org/crocpot-doc/tabix/" target="_blank">File format</a></h6></span>
+        <span><h6>Upload your Chromatin Study Track</h6></span>
       <div class="inc">
         <div>
           <input type="text" placeholder="bed file url" style="min-width: 400px; font-size: 12px;" id="myTrack">
@@ -199,16 +198,6 @@
 	studies.appendChild(a);		    
 	}		
 	});
-	fetch("./gwas.json")
-        .then(response => response.json())
-        .then(function(res) {
-	let results = res.gwas;
-	var studies = document.getElementById("gwas");
-	for (var i = 0; i < results.length; i++) {
-	(function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].assoc_id, ["AssociationLZ", {url: "https://portaldev.sph.umich.edu/api/v1/statistic/single/", params: {  source: results[i].ids, id_field: "variant" } }]); data_sources.add(results[i].credset_id, ["CredibleSetLZ", {params: { fields: { log_pvalue: results[i].log }, threshold: 0.95 } }]); var panel_layout = LocusZoom.Layouts.get('panel', 'association_credible', {namespace: { assoc: results[i].assoc_id, 'credset': results[i].credset_id, 'ld': 'ld' }, title: { text: results[i].title }, id: results[i].assoc_id, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
-	studies.appendChild(a);		    
-	}		
-	});
     // Determine if we're online, based on browser state or presence of an optional query parameter
     var online = !(typeof navigator != "undefined" && !navigator.onLine);
     if (window.location.search.indexOf("offline") != -1) {
@@ -218,6 +207,8 @@
     // Define LocusZoom Data Sources object differently depending on online status
     var apiBase = "https://portaldev.sph.umich.edu/api/v1/";
     data_sources = new LocusZoom.DataSources()
+        .add("assoc_45", ["AssociationLZ", {url: apiBase + "statistic/single/", params: { source: 45, id_field: "variant" }}])
+        .add("credset_45", ["CredibleSetLZ", { params: { fields: { log_pvalue: 'assoc_45:log_pvalue' }, threshold: 0.95 } }])
         .add("ld", ["LDServer", { url: "https://portaldev.sph.umich.edu/ld/", params: { source: '1000G', build: 'GRCh37', population: 'ALL' } }])
         .add("recomb", ["RecombLZ", { url: apiBase + "annotation/recomb/results/", params: { build: 'GRCh37' } }])
         .add("gene", ["GeneLZ", { url: apiBase + "annotation/genes/", params: { build: 'GRCh37' } }])
@@ -237,6 +228,12 @@
     title: { text: 'DIAGRAM 1000G T2D meta-analysis' },
     y_index: -1 // Special option used by addPanel: inserts this study right before the genes track
 	});
+    var extra_panel_layout_DFF044MQE = LocusZoom.Layouts.get('panel', 'coaccessibility', {
+    namespace: { access: 'DFF044MQE' },
+    id: 'access_DFF044MQE',
+    title: { text: 'Islet pcHi-C' },
+    y_index: -1 // Special option used by addPanel: inserts this study right before the genes track
+});
     layout = LocusZoom.Layouts.get("plot", "coaccessibility", { state: initialState });
     // var loop_panel = extra_panel_layout_DFF044MQE[0];
     // Generate the LocusZoom plot, and reflect the initial plot state in url

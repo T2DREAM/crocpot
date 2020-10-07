@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--Navigation bar-->
+<div id="nav-placeholder">
+</div>    
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/themes/semantic/bootstrap-table-semantic.min.css">
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, js, then Bootstrap JS -->
+ <!-- Include jQuery and other required files for Bootstrap -->
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+  <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+
+  <title>CROCPOT</title>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+      margin: 10px 20px;
+    }
+
+    img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+  <body>
+    <div class="container">
+      <div class="container">
+	<br>
+    <div>List of chromatin studies available to visualize on CROCPOT</div>
+      <hr style="clear: both;">
+	  <div class="buttons-toolbar">
+  </div>
+  <table
+  id="table" 
+  data-search="true"
+  data-show-refresh="true"
+  data-show-columns="true"  
+  data-toggle="table"
+  data-buttons-toolbar=".buttons-toolbar"  
+  data-pagination="true"  
+  data-url="./gwas_data.json"
+  data-data-field="data"  
+  >
+  <thead>
+    <tr>
+      <th data-field="analysis" data-sortable="true">Analysis</th>
+      <th data-field="trait" data-sortable="true">Trait</th>
+      <th data-field="study" data-sortable="true">Study</th>
+      <th data-field="pmid" data-formatter="linkFormatter">Pmid</th>      
+    </tr>
+  </thead>
+      </table>
+      </div>
+<script>
+$.get("nav.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+  var $table = $('#table')
+
+  function refreshTable() {
+    $table.bootstrapTable('refreshOptions', {
+      paginationSuccessivelySize: +$('#paginationSuccessivelySize').val(),
+      paginationPagesBySide: +$('#paginationPagesBySide').val(),
+      paginationUseIntermediate: $('#paginationUseIntermediate').prop('checked')
+    })
+  }
+function linkFormatter(value, row) {
+  return "<a href=https://pubmed.ncbi.nlm.nih.gov/" + row.pmid + ">" + row.pmid + "</a>";
+}
+  function mounted() {
+    $('.toolbar input').change(refreshTable)
+}
+</script>
+</body>
+</html>

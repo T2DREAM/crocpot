@@ -1,0 +1,1754 @@
+{    
+    "gwas": [
+    {
+        "log": "assoc_25:log_pvalue",
+        "ids": 25,
+        "assoc_id": "assoc_25",
+        "credset_id": "credset_25",
+        "title": "Height meta-analysis"
+    },
+    {
+        "log": "assoc_24:log_pvalue",
+        "ids": 24,
+        "assoc_id": "assoc_24",
+        "credset_id": "credset_24",
+        "title": "BMI meta-analysis"
+    },
+    {
+        "log": "assoc_26:log_pvalue",
+        "ids": 26,
+        "assoc_id": "assoc_26",
+        "credset_id": "credset_26",
+        "title": "Waist-hip ratio adjusted for BMI meta-analysis"
+    },
+    {
+        "log": "assoc_31:log_pvalue",
+        "ids": 31,
+        "assoc_id": "assoc_31",
+        "credset_id": "credset_31",
+        "title": "Fasting glucose meta-analysis"
+    },
+    {
+        "log": "assoc_33:log_pvalue",
+        "ids": 33,
+        "assoc_id": "assoc_33",
+        "credset_id": "credset_33",
+        "title": "HbA1c meta-analysis"
+    },
+    {
+        "log": "assoc_32:log_pvalue",
+        "ids": 32,
+        "assoc_id": "assoc_32",
+        "credset_id": "credset_32",
+        "title": "Fasting insulin meta-analysis"
+    },
+    {
+        "log": "assoc_34:log_pvalue",
+        "ids": 34,
+        "assoc_id": "assoc_34",
+        "credset_id": "credset_34",
+        "title": "2-hr glucose (adjusted for BMI) meta-analysis"
+    },
+    {
+        "log": "assoc_35:log_pvalue",
+        "ids": 35,
+        "assoc_id": "assoc_35",
+        "credset_id": "credset_35",
+        "title": "Fasting proinsulin meta-analysis"
+    },
+    {
+        "log": "assoc_36:log_pvalue",
+        "ids": 36,
+        "assoc_id": "assoc_36",
+        "credset_id": "credset_36",
+        "title": "Fasting insulin meta-analysis"
+    },
+    {
+        "log": "assoc_27:log_pvalue",
+        "ids": 27,
+        "assoc_id": "assoc_27",
+        "credset_id": "credset_27",
+        "title": "High-density lipoprotein (HDL) meta-analysis"
+    },
+    {
+        "log": "assoc_28:log_pvalue",
+        "ids": 28,
+        "assoc_id": "assoc_28",
+        "credset_id": "credset_28",
+        "title": "Low-density lipoprotein (LDL) meta-analysis"
+    },
+    {
+        "log": "assoc_29:log_pvalue",
+        "ids": 29,
+        "assoc_id": "assoc_29",
+        "credset_id": "credset_29",
+        "title": "Triglycerides meta-analysis"
+    },
+    {
+        "log": "assoc_30:log_pvalue",
+        "ids": 30,
+        "assoc_id": "assoc_30",
+        "credset_id": "credset_30",
+        "title": "Total cholesterol meta-analysis"
+    },
+    {
+        "log": "assoc_37:log_pvalue",
+        "ids": 37,
+        "assoc_id": "assoc_37",
+        "credset_id": "credset_37",
+        "title": "Advanced age-related macular degeneration vs. controls"
+    },
+    {
+        "log": "assoc_41:log_pvalue",
+        "ids": 41,
+        "assoc_id": "assoc_41",
+        "credset_id": "credset_41",
+        "title": "Advanced age-related macular degeneration vs. controls meta-analysis"
+    },
+    {
+        "log": "assoc_42:log_pvalue",
+        "ids": 42,
+        "assoc_id": "assoc_42",
+        "credset_id": "credset_42",
+        "title": "Geographic atrophy vs. controls meta-analysis"
+    },
+    {
+        "log": "assoc_43:log_pvalue",
+        "ids": 43,
+        "assoc_id": "assoc_43",
+        "credset_id": "credset_43",
+        "title": "Neovascularization disease vs. controls meta-analysis"
+    },
+    {
+        "log": "assoc_38:log_pvalue",
+        "ids": 38,
+        "assoc_id": "assoc_38",
+        "credset_id": "credset_38",
+        "title": "Diastolic blood pressure meta-analysis"
+    },
+    {
+        "log": "assoc_39:log_pvalue",
+        "ids": 39,
+        "assoc_id": "assoc_39",
+        "credset_id": "credset_39",
+        "title": "Systolic blood pressure meta-analysis"
+    },
+    {
+        "log": "assoc_40:log_pvalue",
+        "ids": 40,
+        "assoc_id": "assoc_40",
+        "credset_id": "credset_40",
+        "title": "Schizophrenia meta-analysis"
+    },
+    {
+        "log": "assoc_44:log_pvalue",
+        "ids": 44,
+        "assoc_id": "assoc_44",
+        "credset_id": "credset_44",
+        "title": "DIAGRAM v3 T2D meta-analysis"
+    },
+    {
+        "log": "assoc_45:log_pvalue",
+        "ids": 45,
+        "assoc_id": "assoc_45",
+        "credset_id": "credset_45",
+        "title": "DIAGRAM 1000G T2D meta-analysis"
+    },
+    {
+        "log": "assoc_46:log_pvalue",
+        "ids": 46,
+        "assoc_id": "assoc_46",
+        "credset_id": "credset_46",
+        "title": "DIAGRAM 1000G T2D adjusted for BMI meta-analysis"
+    },
+    {
+        "log": "assoc_47:log_pvalue",
+        "ids": 47,
+        "assoc_id": "assoc_47",
+        "credset_id": "credset_47",
+        "title": "BMI meta-analysis"
+    },
+    {
+        "log": "assoc_48:log_pvalue",
+        "ids": 48,
+        "assoc_id": "assoc_48",
+        "credset_id": "credset_48",
+        "title": "Height meta-analysis"
+    },
+    {
+        "log": "assoc_49:log_pvalue",
+        "ids": 49,
+        "assoc_id": "assoc_49",
+        "credset_id": "credset_49",
+        "title": "BMI meta-analysis| men only"
+    },
+    {
+        "log": "assoc_50:log_pvalue",
+        "ids": 50,
+        "assoc_id": "assoc_50",
+        "credset_id": "credset_50",
+        "title": "BMI meta-analysis| women only"
+    },
+    {
+        "log": "assoc_51:log_pvalue",
+        "ids": 51,
+        "assoc_id": "assoc_51",
+        "credset_id": "credset_51",
+        "title": "BMI meta-analysis| European ancestry"
+    },
+    {
+        "log": "assoc_52:log_pvalue",
+        "ids": 52,
+        "assoc_id": "assoc_52",
+        "credset_id": "credset_52",
+        "title": "BMI meta-analysis| all ancestries"
+    },
+    {
+        "log": "assoc_53:log_pvalue",
+        "ids": 53,
+        "assoc_id": "assoc_53",
+        "credset_id": "credset_53",
+        "title": "Waist-hip ratio adjusted for BMI meta-analysis| all ancestries"
+    },
+    {
+        "log": "assoc_54:log_pvalue",
+        "ids": 54,
+        "assoc_id": "assoc_54",
+        "credset_id": "credset_54",
+        "title": "Waist-hip ratio meta-analysis| all ancestries"
+    },
+    {
+        "log": "assoc_55:log_pvalue",
+        "ids": 55,
+        "assoc_id": "assoc_55",
+        "credset_id": "credset_55",
+        "title": "Waist circumference adjusted for BMI meta-analysis| all ancestries"
+    },
+    {
+        "log": "assoc_56:log_pvalue",
+        "ids": 56,
+        "assoc_id": "assoc_56",
+        "credset_id": "credset_56",
+        "title": "Waist circumference meta-analysis| European ancestry"
+    },
+    {
+        "log": "assoc_57:log_pvalue",
+        "ids": 57,
+        "assoc_id": "assoc_57",
+        "credset_id": "credset_57",
+        "title": "Hip circumference adjusted for BMI meta-analysis| European ancestry"
+    },
+    {
+        "log": "assoc_58:log_pvalue",
+        "ids": 58,
+        "assoc_id": "assoc_58",
+        "credset_id": "credset_58",
+        "title": "Hip circumference meta-analysis| European ancestry"
+    },
+    {
+        "log": "assoc_60:log_pvalue",
+        "ids": 60,
+        "assoc_id": "assoc_60",
+        "credset_id": "credset_60",
+        "title": "Corrected insulin response at 30-min OGTT"
+    },
+    {
+        "log": "assoc_61:log_pvalue",
+        "ids": 61,
+        "assoc_id": "assoc_61",
+        "credset_id": "credset_61",
+        "title": "Corrected insulin response at 30-min OGTT adjusted for ISI"
+    },
+    {
+        "log": "assoc_62:log_pvalue",
+        "ids": 62,
+        "assoc_id": "assoc_62",
+        "credset_id": "credset_62",
+        "title": "Area under curve of insulin levels during OGTT"
+    },
+    {
+        "log": "assoc_63:log_pvalue",
+        "ids": 63,
+        "assoc_id": "assoc_63",
+        "credset_id": "credset_63",
+        "title": "AUC insulin / AUC glucose during OGTT"
+    },
+    {
+        "log": "assoc_64:log_pvalue",
+        "ids": 64,
+        "assoc_id": "assoc_64",
+        "credset_id": "credset_64",
+        "title": "Disposition index (CIR * ISI)"
+    },
+    {
+        "log": "assoc_65:log_pvalue",
+        "ids": 65,
+        "assoc_id": "assoc_65",
+        "credset_id": "credset_65",
+        "title": "Incremental insulin at 30-min"
+    },
+    {
+        "log": "assoc_66:log_pvalue",
+        "ids": 66,
+        "assoc_id": "assoc_66",
+        "credset_id": "credset_66",
+        "title": "Insulin at 30-min OGTT"
+    },
+    {
+        "log": "assoc_67:log_pvalue",
+        "ids": 67,
+        "assoc_id": "assoc_67",
+        "credset_id": "credset_67",
+        "title": "Insulin adjusted for BMI at 30-min OGTT"
+    },
+    {
+        "log": "assoc_68:log_pvalue",
+        "ids": 68,
+        "assoc_id": "assoc_68",
+        "credset_id": "credset_68",
+        "title": "Insulin sensitivity index"
+    },
+    {
+        "log": "assoc_69:log_pvalue",
+        "ids": 69,
+        "assoc_id": "assoc_69",
+        "credset_id": "credset_69",
+        "title": "LDL exome chip meta-analysis in primarily Europeans (N=300K)"
+    },
+    {
+        "log": "assoc_70:log_pvalue",
+        "ids": 70,
+        "assoc_id": "assoc_70",
+        "credset_id": "credset_70",
+        "title": "HDL exome chip meta-analysis in primarily Europeans (N=300K)"
+    },
+    {
+        "log": "assoc_71:log_pvalue",
+        "ids": 71,
+        "assoc_id": "assoc_71",
+        "credset_id": "credset_71",
+        "title": "Total cholesterol exome chip meta-analysis in primarily Europeans (N=300K)"
+    },
+    {
+        "log": "assoc_72:log_pvalue",
+        "ids": 72,
+        "assoc_id": "assoc_72",
+        "credset_id": "credset_72",
+        "title": "Triglycerides exome chip meta-analysis in primarily Europeans (N=300K)"
+    },
+    {
+        "log": "assoc_73:log_pvalue",
+        "ids": 73,
+        "assoc_id": "assoc_73",
+        "credset_id": "credset_73",
+        "title": "LDL exome chip meta-analysis in Europeans (N=300K) and East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_74:log_pvalue",
+        "ids": 74,
+        "assoc_id": "assoc_74",
+        "credset_id": "credset_74",
+        "title": "HDL exome chip meta-analysis in Europeans (N=300K) and East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_75:log_pvalue",
+        "ids": 75,
+        "assoc_id": "assoc_75",
+        "credset_id": "credset_75",
+        "title": "Total cholesterol exome chip meta-analysis in Europeans (N=300K) and East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_76:log_pvalue",
+        "ids": 76,
+        "assoc_id": "assoc_76",
+        "credset_id": "credset_76",
+        "title": "Triglycerides exome chip meta-analysis in Europeans (N=300K) and East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_77:log_pvalue",
+        "ids": 77,
+        "assoc_id": "assoc_77",
+        "credset_id": "credset_77",
+        "title": "LDL exome chip meta-analysis in primarily East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_78:log_pvalue",
+        "ids": 78,
+        "assoc_id": "assoc_78",
+        "credset_id": "credset_78",
+        "title": "HDL exome chip meta-analysis in primarily East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_79:log_pvalue",
+        "ids": 79,
+        "assoc_id": "assoc_79",
+        "credset_id": "credset_79",
+        "title": "Total cholesterol exome chip meta-analysis in primarily East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_80:log_pvalue",
+        "ids": 80,
+        "assoc_id": "assoc_80",
+        "credset_id": "credset_80",
+        "title": "Triglycerides exome chip meta-analysis in primarily East Asians (N=47K)"
+    },
+    {
+        "log": "assoc_164:log_pvalue",
+        "ids": 164,
+        "assoc_id": "assoc_164",
+        "credset_id": "credset_164",
+        "title": "FV1- Cranial base width| case-control in Pittsburgh whites"
+    },
+    {
+        "log": "assoc_165:log_pvalue",
+        "ids": 165,
+        "assoc_id": "assoc_165",
+        "credset_id": "credset_165",
+        "title": "FV1- Upper facial depth| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_166:log_pvalue",
+        "ids": 166,
+        "assoc_id": "assoc_166",
+        "credset_id": "credset_166",
+        "title": "FV1- Middle facial depth| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_167:log_pvalue",
+        "ids": 167,
+        "assoc_id": "assoc_167",
+        "credset_id": "credset_167",
+        "title": "FV1- Lower facial depth| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_168:log_pvalue",
+        "ids": 168,
+        "assoc_id": "assoc_168",
+        "credset_id": "credset_168",
+        "title": "FV1- Morphological facial height| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_169:log_pvalue",
+        "ids": 169,
+        "assoc_id": "assoc_169",
+        "credset_id": "credset_169",
+        "title": "FV1- Upper facial height| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_170:log_pvalue",
+        "ids": 170,
+        "assoc_id": "assoc_170",
+        "credset_id": "credset_170",
+        "title": "FV1- Lower facial height| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_171:log_pvalue",
+        "ids": 171,
+        "assoc_id": "assoc_171",
+        "credset_id": "credset_171",
+        "title": "FV1- Intercanthal width| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_172:log_pvalue",
+        "ids": 172,
+        "assoc_id": "assoc_172",
+        "credset_id": "credset_172",
+        "title": "FV1- Outercanthal width| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_173:log_pvalue",
+        "ids": 173,
+        "assoc_id": "assoc_173",
+        "credset_id": "credset_173",
+        "title": "FV1- Palpebral fissure length| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_174:log_pvalue",
+        "ids": 174,
+        "assoc_id": "assoc_174",
+        "credset_id": "credset_174",
+        "title": "FV1- Nasal width| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_175:log_pvalue",
+        "ids": 175,
+        "assoc_id": "assoc_175",
+        "credset_id": "credset_175",
+        "title": "FV1- Subnasal width| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_176:log_pvalue",
+        "ids": 176,
+        "assoc_id": "assoc_176",
+        "credset_id": "credset_176",
+        "title": "FV1- Nasal protrusion| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_177:log_pvalue",
+        "ids": 177,
+        "assoc_id": "assoc_177",
+        "credset_id": "credset_177",
+        "title": "FV1- Nasal ala length| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_178:log_pvalue",
+        "ids": 178,
+        "assoc_id": "assoc_178",
+        "credset_id": "credset_178",
+        "title": "FV1- Nasal height| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_179:log_pvalue",
+        "ids": 179,
+        "assoc_id": "assoc_179",
+        "credset_id": "credset_179",
+        "title": "FV1- Nasal bridge length| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_180:log_pvalue",
+        "ids": 180,
+        "assoc_id": "assoc_180",
+        "credset_id": "credset_180",
+        "title": "FV1- Labial fissure width| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_181:log_pvalue",
+        "ids": 181,
+        "assoc_id": "assoc_181",
+        "credset_id": "credset_181",
+        "title": "FV1- Philtrum length| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_182:log_pvalue",
+        "ids": 182,
+        "assoc_id": "assoc_182",
+        "credset_id": "credset_182",
+        "title": "FV1- Lower lip height| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_183:log_pvalue",
+        "ids": 183,
+        "assoc_id": "assoc_183",
+        "credset_id": "credset_183",
+        "title": "FV1- Upper lip height| case-control of Pittsburgh whites"
+    },
+    {
+        "log": "assoc_184:log_pvalue",
+        "ids": 184,
+        "assoc_id": "assoc_184",
+        "credset_id": "credset_184",
+        "title": "FV1- Cranial base width| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_185:log_pvalue",
+        "ids": 185,
+        "assoc_id": "assoc_185",
+        "credset_id": "credset_185",
+        "title": "FV1- Upper facial depth| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_186:log_pvalue",
+        "ids": 186,
+        "assoc_id": "assoc_186",
+        "credset_id": "credset_186",
+        "title": "FV1- Middle facial depth| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_187:log_pvalue",
+        "ids": 187,
+        "assoc_id": "assoc_187",
+        "credset_id": "credset_187",
+        "title": "FV1- Lower facial depth| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_188:log_pvalue",
+        "ids": 188,
+        "assoc_id": "assoc_188",
+        "credset_id": "credset_188",
+        "title": "FV1- Morphological facial height| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_189:log_pvalue",
+        "ids": 189,
+        "assoc_id": "assoc_189",
+        "credset_id": "credset_189",
+        "title": "FV1- Upper facial height| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_190:log_pvalue",
+        "ids": 190,
+        "assoc_id": "assoc_190",
+        "credset_id": "credset_190",
+        "title": "FV1- Lower facial height| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_191:log_pvalue",
+        "ids": 191,
+        "assoc_id": "assoc_191",
+        "credset_id": "credset_191",
+        "title": "FV1- Intercanthal width| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_192:log_pvalue",
+        "ids": 192,
+        "assoc_id": "assoc_192",
+        "credset_id": "credset_192",
+        "title": "FV1- Outercanthal width| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_193:log_pvalue",
+        "ids": 193,
+        "assoc_id": "assoc_193",
+        "credset_id": "credset_193",
+        "title": "FV1- Palpebral fissure length| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_194:log_pvalue",
+        "ids": 194,
+        "assoc_id": "assoc_194",
+        "credset_id": "credset_194",
+        "title": "FV1- Nasal width| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_195:log_pvalue",
+        "ids": 195,
+        "assoc_id": "assoc_195",
+        "credset_id": "credset_195",
+        "title": "FV1- Subnasal width| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_196:log_pvalue",
+        "ids": 196,
+        "assoc_id": "assoc_196",
+        "credset_id": "credset_196",
+        "title": "FV1- Nasal protrusion| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_197:log_pvalue",
+        "ids": 197,
+        "assoc_id": "assoc_197",
+        "credset_id": "credset_197",
+        "title": "FV1- Nasal ala length| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_198:log_pvalue",
+        "ids": 198,
+        "assoc_id": "assoc_198",
+        "credset_id": "credset_198",
+        "title": "FV1- Nasal height| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_199:log_pvalue",
+        "ids": 199,
+        "assoc_id": "assoc_199",
+        "credset_id": "credset_199",
+        "title": "FV1- Nasal bridge length| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_200:log_pvalue",
+        "ids": 200,
+        "assoc_id": "assoc_200",
+        "credset_id": "credset_200",
+        "title": "FV1- Labial fissure width| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_201:log_pvalue",
+        "ids": 201,
+        "assoc_id": "assoc_201",
+        "credset_id": "credset_201",
+        "title": "FV1- Philtrum length| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_202:log_pvalue",
+        "ids": 202,
+        "assoc_id": "assoc_202",
+        "credset_id": "credset_202",
+        "title": "FV1- Lower lip height| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_203:log_pvalue",
+        "ids": 203,
+        "assoc_id": "assoc_203",
+        "credset_id": "credset_203",
+        "title": "FV1- Upper lip height| case-control of Denver whites"
+    },
+    {
+        "log": "assoc_204:log_pvalue",
+        "ids": 204,
+        "assoc_id": "assoc_204",
+        "credset_id": "credset_204",
+        "title": "FV1- Cranial base width| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_205:log_pvalue",
+        "ids": 205,
+        "assoc_id": "assoc_205",
+        "credset_id": "credset_205",
+        "title": "FV1- Upper facial depth| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_206:log_pvalue",
+        "ids": 206,
+        "assoc_id": "assoc_206",
+        "credset_id": "credset_206",
+        "title": "FV1- Middle facial depth| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_207:log_pvalue",
+        "ids": 207,
+        "assoc_id": "assoc_207",
+        "credset_id": "credset_207",
+        "title": "FV1- Lower facial depth| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_208:log_pvalue",
+        "ids": 208,
+        "assoc_id": "assoc_208",
+        "credset_id": "credset_208",
+        "title": "FV1- Morphological facial height| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_209:log_pvalue",
+        "ids": 209,
+        "assoc_id": "assoc_209",
+        "credset_id": "credset_209",
+        "title": "FV1- Upper facial height| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_210:log_pvalue",
+        "ids": 210,
+        "assoc_id": "assoc_210",
+        "credset_id": "credset_210",
+        "title": "FV1- Lower facial height| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_211:log_pvalue",
+        "ids": 211,
+        "assoc_id": "assoc_211",
+        "credset_id": "credset_211",
+        "title": "FV1- Intercanthal width| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_212:log_pvalue",
+        "ids": 212,
+        "assoc_id": "assoc_212",
+        "credset_id": "credset_212",
+        "title": "FV1- Outercanthal width| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_213:log_pvalue",
+        "ids": 213,
+        "assoc_id": "assoc_213",
+        "credset_id": "credset_213",
+        "title": "FV1- Palpebral fissure length| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_214:log_pvalue",
+        "ids": 214,
+        "assoc_id": "assoc_214",
+        "credset_id": "credset_214",
+        "title": "FV1- Nasal width| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_215:log_pvalue",
+        "ids": 215,
+        "assoc_id": "assoc_215",
+        "credset_id": "credset_215",
+        "title": "FV1- Subnasal width| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_216:log_pvalue",
+        "ids": 216,
+        "assoc_id": "assoc_216",
+        "credset_id": "credset_216",
+        "title": "FV1- Nasal protrusion| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_217:log_pvalue",
+        "ids": 217,
+        "assoc_id": "assoc_217",
+        "credset_id": "credset_217",
+        "title": "FV1- Nasal ala length| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_218:log_pvalue",
+        "ids": 218,
+        "assoc_id": "assoc_218",
+        "credset_id": "credset_218",
+        "title": "FV1- Nasal height| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_219:log_pvalue",
+        "ids": 219,
+        "assoc_id": "assoc_219",
+        "credset_id": "credset_219",
+        "title": "FV1- Nasal bridge length| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_220:log_pvalue",
+        "ids": 220,
+        "assoc_id": "assoc_220",
+        "credset_id": "credset_220",
+        "title": "FV1- Labial fissure width| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_221:log_pvalue",
+        "ids": 221,
+        "assoc_id": "assoc_221",
+        "credset_id": "credset_221",
+        "title": "FV1- Philtrum length| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_222:log_pvalue",
+        "ids": 222,
+        "assoc_id": "assoc_222",
+        "credset_id": "credset_222",
+        "title": "FV1- Lower lip height| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_223:log_pvalue",
+        "ids": 223,
+        "assoc_id": "assoc_223",
+        "credset_id": "credset_223",
+        "title": "FV1- Upper lip height| meta of Pittsburgh + Denver whites"
+    },
+    {
+        "log": "assoc_224:log_pvalue",
+        "ids": 224,
+        "assoc_id": "assoc_224",
+        "credset_id": "credset_224",
+        "title": "OFC4- CL/P| meta of case-control and TDT across ethnicities"
+    },
+    {
+        "log": "assoc_225:log_pvalue",
+        "ids": 225,
+        "assoc_id": "assoc_225",
+        "credset_id": "credset_225",
+        "title": "OFC4- CL/P| TDT in trios across ethnicities"
+    },
+    {
+        "log": "assoc_226:log_pvalue",
+        "ids": 226,
+        "assoc_id": "assoc_226",
+        "credset_id": "credset_226",
+        "title": "OFC4- CL/P| case-control across ethnicities"
+    },
+    {
+        "log": "assoc_227:log_pvalue",
+        "ids": 227,
+        "assoc_id": "assoc_227",
+        "credset_id": "credset_227",
+        "title": "OFC4- CL/P| meta of case-control and TDT in whites"
+    },
+    {
+        "log": "assoc_228:log_pvalue",
+        "ids": 228,
+        "assoc_id": "assoc_228",
+        "credset_id": "credset_228",
+        "title": "OFC4- CL/P| TDT in white trios"
+    },
+    {
+        "log": "assoc_229:log_pvalue",
+        "ids": 229,
+        "assoc_id": "assoc_229",
+        "credset_id": "credset_229",
+        "title": "OFC4- CL/P| case-control in whites"
+    },
+    {
+        "log": "assoc_230:log_pvalue",
+        "ids": 230,
+        "assoc_id": "assoc_230",
+        "credset_id": "credset_230",
+        "title": "OFC4- CL/P| meta of case-control and TDT in Latin Americans"
+    },
+    {
+        "log": "assoc_231:log_pvalue",
+        "ids": 231,
+        "assoc_id": "assoc_231",
+        "credset_id": "credset_231",
+        "title": "OFC4- CL/P| TDT in Latin American trios"
+    },
+    {
+        "log": "assoc_232:log_pvalue",
+        "ids": 232,
+        "assoc_id": "assoc_232",
+        "credset_id": "credset_232",
+        "title": "OFC4- CL/P| case-control in Latin Americans"
+    },
+    {
+        "log": "assoc_233:log_pvalue",
+        "ids": 233,
+        "assoc_id": "assoc_233",
+        "credset_id": "credset_233",
+        "title": "OFC4- CL/P| meta of case-control and TDT in Asians"
+    },
+    {
+        "log": "assoc_234:log_pvalue",
+        "ids": 234,
+        "assoc_id": "assoc_234",
+        "credset_id": "credset_234",
+        "title": "OFC4- CL/P| TDT in Asian trios"
+    },
+    {
+        "log": "assoc_235:log_pvalue",
+        "ids": 235,
+        "assoc_id": "assoc_235",
+        "credset_id": "credset_235",
+        "title": "OFC4- CL/P| case-control in Asians"
+    },
+    {
+        "log": "assoc_236:log_pvalue",
+        "ids": 236,
+        "assoc_id": "assoc_236",
+        "credset_id": "credset_236",
+        "title": "OFC4- CP| meta of case-control and TDT across ethnicities"
+    },
+    {
+        "log": "assoc_237:log_pvalue",
+        "ids": 237,
+        "assoc_id": "assoc_237",
+        "credset_id": "credset_237",
+        "title": "OFC4- CP| TDT in trios across ethnicities"
+    },
+    {
+        "log": "assoc_238:log_pvalue",
+        "ids": 238,
+        "assoc_id": "assoc_238",
+        "credset_id": "credset_238",
+        "title": "OFC4- CP| case-control across ethnicities"
+    },
+    {
+        "log": "assoc_239:log_pvalue",
+        "ids": 239,
+        "assoc_id": "assoc_239",
+        "credset_id": "credset_239",
+        "title": "OFC4- CP| meta of case-control and TDT in whites"
+    },
+    {
+        "log": "assoc_240:log_pvalue",
+        "ids": 240,
+        "assoc_id": "assoc_240",
+        "credset_id": "credset_240",
+        "title": "OFC4- CP| TDT in white trios"
+    },
+    {
+        "log": "assoc_241:log_pvalue",
+        "ids": 241,
+        "assoc_id": "assoc_241",
+        "credset_id": "credset_241",
+        "title": "OFC4- CP| case-control in whites"
+    },
+    {
+        "log": "assoc_242:log_pvalue",
+        "ids": 242,
+        "assoc_id": "assoc_242",
+        "credset_id": "credset_242",
+        "title": "DENT1- Prim| dft| case-control assoc. all subjects"
+    },
+    {
+        "log": "assoc_243:log_pvalue",
+        "ids": 243,
+        "assoc_id": "assoc_243",
+        "credset_id": "credset_243",
+        "title": "DENT1- Prim| dft case-control assoc. low fluoride group"
+    },
+    {
+        "log": "assoc_244:log_pvalue",
+        "ids": 244,
+        "assoc_id": "assoc_244",
+        "credset_id": "credset_244",
+        "title": "DENT1- Prim| dft| case-control assoc. sufficient fluoride group"
+    },
+    {
+        "log": "assoc_245:log_pvalue",
+        "ids": 245,
+        "assoc_id": "assoc_245",
+        "credset_id": "credset_245",
+        "title": "DENT3- Prim| pit-and-fissure dfs| case-control assoc."
+    },
+    {
+        "log": "assoc_246:log_pvalue",
+        "ids": 246,
+        "assoc_id": "assoc_246",
+        "credset_id": "credset_246",
+        "title": "DENT3- Prim| smooth dfs| case-control assoc."
+    },
+    {
+        "log": "assoc_247:log_pvalue",
+        "ids": 247,
+        "assoc_id": "assoc_247",
+        "credset_id": "credset_247",
+        "title": "DENT3- Perm| pit-and-fissure DMFS| case-control assoc."
+    },
+    {
+        "log": "assoc_248:log_pvalue",
+        "ids": 248,
+        "assoc_id": "assoc_248",
+        "credset_id": "credset_248",
+        "title": "DENT3- Perm| smooth DMFS| case-control assoc."
+    },
+    {
+        "log": "assoc_249:log_pvalue",
+        "ids": 249,
+        "assoc_id": "assoc_249",
+        "credset_id": "credset_249",
+        "title": "OFC1- All clefts| combined TDT of Asian and white trios"
+    },
+    {
+        "log": "assoc_250:log_pvalue",
+        "ids": 250,
+        "assoc_id": "assoc_250",
+        "credset_id": "credset_250",
+        "title": "OFC1- CL| combined TDT of Asian and white trios"
+    },
+    {
+        "log": "assoc_251:log_pvalue",
+        "ids": 251,
+        "assoc_id": "assoc_251",
+        "credset_id": "credset_251",
+        "title": "OFC1- CLP| combined TDT of Asian and white trios"
+    },
+    {
+        "log": "assoc_252:log_pvalue",
+        "ids": 252,
+        "assoc_id": "assoc_252",
+        "credset_id": "credset_252",
+        "title": "OFC1-CP| combined TDT of Asian and white trios"
+    },
+    {
+        "log": "assoc_253:log_pvalue",
+        "ids": 253,
+        "assoc_id": "assoc_253",
+        "credset_id": "credset_253",
+        "title": "OFC1-CL/P| combined TDT of Asian and white trios"
+    },
+    {
+        "log": "assoc_254:log_pvalue",
+        "ids": 254,
+        "assoc_id": "assoc_254",
+        "credset_id": "credset_254",
+        "title": "OFC1-CP/L| TDT of combined Asian and white trios"
+    },
+    {
+        "log": "assoc_255:log_pvalue",
+        "ids": 255,
+        "assoc_id": "assoc_255",
+        "credset_id": "credset_255",
+        "title": "OFC1- All clefts| TDT of Asian trios"
+    },
+    {
+        "log": "assoc_256:log_pvalue",
+        "ids": 256,
+        "assoc_id": "assoc_256",
+        "credset_id": "credset_256",
+        "title": "OFC1- CL| TDT of Asian trios"
+    },
+    {
+        "log": "assoc_257:log_pvalue",
+        "ids": 257,
+        "assoc_id": "assoc_257",
+        "credset_id": "credset_257",
+        "title": "OFC1- CLP| TDT of Asian trios"
+    },
+    {
+        "log": "assoc_258:log_pvalue",
+        "ids": 258,
+        "assoc_id": "assoc_258",
+        "credset_id": "credset_258",
+        "title": "OFC1-CP| TDT of Asian trios"
+    },
+    {
+        "log": "assoc_259:log_pvalue",
+        "ids": 259,
+        "assoc_id": "assoc_259",
+        "credset_id": "credset_259",
+        "title": "OFC1-CL/P| TDT of Asian trios"
+    },
+    {
+        "log": "assoc_260:log_pvalue",
+        "ids": 260,
+        "assoc_id": "assoc_260",
+        "credset_id": "credset_260",
+        "title": "OFC1-CP/L| TDT of Asian trios"
+    },
+    {
+        "log": "assoc_261:log_pvalue",
+        "ids": 261,
+        "assoc_id": "assoc_261",
+        "credset_id": "credset_261",
+        "title": "OFC1- All clefts| TDT of white trios"
+    },
+    {
+        "log": "assoc_262:log_pvalue",
+        "ids": 262,
+        "assoc_id": "assoc_262",
+        "credset_id": "credset_262",
+        "title": "OFC1- CL| TDT of white trios"
+    },
+    {
+        "log": "assoc_263:log_pvalue",
+        "ids": 263,
+        "assoc_id": "assoc_263",
+        "credset_id": "credset_263",
+        "title": "OFC1- CLP| TDT of white trios"
+    },
+    {
+        "log": "assoc_264:log_pvalue",
+        "ids": 264,
+        "assoc_id": "assoc_264",
+        "credset_id": "credset_264",
+        "title": "OFC1-CP| TDT of white trios"
+    },
+    {
+        "log": "assoc_265:log_pvalue",
+        "ids": 265,
+        "assoc_id": "assoc_265",
+        "credset_id": "credset_265",
+        "title": "OFC1-CL/P| TDT of white trios"
+    },
+    {
+        "log": "assoc_266:log_pvalue",
+        "ids": 266,
+        "assoc_id": "assoc_266",
+        "credset_id": "credset_266",
+        "title": "OFC1-CP/L| TDT of white trios"
+    },
+    {
+        "log": "assoc_267:log_pvalue",
+        "ids": 267,
+        "assoc_id": "assoc_267",
+        "credset_id": "credset_267",
+        "title": "OFC2- CL/P| TDT of target regions in all trios"
+    },
+    {
+        "log": "assoc_268:log_pvalue",
+        "ids": 268,
+        "assoc_id": "assoc_268",
+        "credset_id": "credset_268",
+        "title": "OFC2- CL/P| TDT of target regions in Asian trios"
+    },
+    {
+        "log": "assoc_269:log_pvalue",
+        "ids": 269,
+        "assoc_id": "assoc_269",
+        "credset_id": "credset_269",
+        "title": "OFC2- CL/P| TDT of target regions in European trios"
+    },
+    {
+        "log": "assoc_270:log_pvalue",
+        "ids": 270,
+        "assoc_id": "assoc_270",
+        "credset_id": "credset_270",
+        "title": "OFC3- CL/P| DFAM association in native Guatemalans"
+    },
+    {
+        "log": "assoc_275:log_pvalue",
+        "ids": 275,
+        "assoc_id": "assoc_275",
+        "credset_id": "credset_275",
+        "title": "DENT2- Perm| DMFT| meta GWAS of COHRA| DRDR1 and DRDR2"
+    },
+    {
+        "log": "assoc_276:log_pvalue",
+        "ids": 276,
+        "assoc_id": "assoc_276",
+        "credset_id": "credset_276",
+        "title": "DENT2- Perm| DMFT| meta GWAS of ARIC and HPFS"
+    },
+    {
+        "log": "assoc_277:log_pvalue",
+        "ids": 277,
+        "assoc_id": "assoc_277",
+        "credset_id": "credset_277",
+        "title": "DENT2- Perm| DMFT| meta GWAS of all studies"
+    },
+    {
+        "log": "assoc_278:log_pvalue",
+        "ids": 278,
+        "assoc_id": "assoc_278",
+        "credset_id": "credset_278",
+        "title": "OFC5-All clefts| meta GWAS of OFC1"
+    },
+    {
+        "log": "assoc_279:log_pvalue",
+        "ids": 279,
+        "assoc_id": "assoc_279",
+        "credset_id": "credset_279",
+        "title": "OFC5-CL/P| meta GWAS of OFC1 and OFC4 across ethnicities"
+    },
+    {
+        "log": "assoc_280:log_pvalue",
+        "ids": 280,
+        "assoc_id": "assoc_280",
+        "credset_id": "credset_280",
+        "title": "OFC5-CL| meta GWAS of OFC1 and OFC4 across ethnicities"
+    },
+    {
+        "log": "assoc_281:log_pvalue",
+        "ids": 281,
+        "assoc_id": "assoc_281",
+        "credset_id": "credset_281",
+        "title": "OFC5-All clefts| meta GWAS of OFC1 and OFC4 in Asians"
+    },
+    {
+        "log": "assoc_282:log_pvalue",
+        "ids": 282,
+        "assoc_id": "assoc_282",
+        "credset_id": "credset_282",
+        "title": "OFC5-CL/P| meta GWAS of OFC1 and OFC4 in Asians"
+    },
+    {
+        "log": "assoc_283:log_pvalue",
+        "ids": 283,
+        "assoc_id": "assoc_283",
+        "credset_id": "credset_283",
+        "title": "OFC5-CL| meta GWAS of OFC1 and OFC4 in Asians"
+    },
+    {
+        "log": "assoc_284:log_pvalue",
+        "ids": 284,
+        "assoc_id": "assoc_284",
+        "credset_id": "credset_284",
+        "title": "OFC5-All clefts| meta GWAS of OFC1 and OFC4 in whites"
+    },
+    {
+        "log": "assoc_285:log_pvalue",
+        "ids": 285,
+        "assoc_id": "assoc_285",
+        "credset_id": "credset_285",
+        "title": "OFC5-CL/P| meta GWAS of OFC1 and OFC4 in whites"
+    },
+    {
+        "log": "assoc_286:log_pvalue",
+        "ids": 286,
+        "assoc_id": "assoc_286",
+        "credset_id": "credset_286",
+        "title": "OFC5-CL| meta GWAS of OFC1 and OFC4 in whites"
+    },
+    {
+        "log": "assoc_272:log_pvalue",
+        "ids": 272,
+        "assoc_id": "assoc_272",
+        "credset_id": "credset_272",
+        "title": "Free T4"
+    },
+    {
+        "log": "assoc_273:log_pvalue",
+        "ids": 273,
+        "assoc_id": "assoc_273",
+        "credset_id": "credset_273",
+        "title": "Circulating TSH"
+    },
+    {
+        "log": "assoc_274:log_pvalue",
+        "ids": 274,
+        "assoc_id": "assoc_274",
+        "credset_id": "credset_274",
+        "title": "Increased TSH (TSH > upper limit of normal range)"
+    },
+    {
+        "log": "assoc_91:log_pvalue",
+        "ids": 91,
+        "assoc_id": "assoc_91",
+        "credset_id": "credset_91",
+        "title": "Total cholesterol GWAS"
+    },
+    {
+        "log": "assoc_92:log_pvalue",
+        "ids": 92,
+        "assoc_id": "assoc_92",
+        "credset_id": "credset_92",
+        "title": "Concentration of chylomicrons and largest VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_93:log_pvalue",
+        "ids": 93,
+        "assoc_id": "assoc_93",
+        "credset_id": "credset_93",
+        "title": "Phospholipids in chylomicrons and largest VLDL GWAS"
+    },
+    {
+        "log": "assoc_94:log_pvalue",
+        "ids": 94,
+        "assoc_id": "assoc_94",
+        "credset_id": "credset_94",
+        "title": "Triglycerides in chylomicrons and largest VLDL GWAS"
+    },
+    {
+        "log": "assoc_95:log_pvalue",
+        "ids": 95,
+        "assoc_id": "assoc_95",
+        "credset_id": "credset_95",
+        "title": "Esterified cholesterol GWAS"
+    },
+    {
+        "log": "assoc_96:log_pvalue",
+        "ids": 96,
+        "assoc_id": "assoc_96",
+        "credset_id": "credset_96",
+        "title": "Free cholesterol GWAS"
+    },
+    {
+        "log": "assoc_97:log_pvalue",
+        "ids": 97,
+        "assoc_id": "assoc_97",
+        "credset_id": "credset_97",
+        "title": "HDL cholesterol GWAS"
+    },
+    {
+        "log": "assoc_98:log_pvalue",
+        "ids": 98,
+        "assoc_id": "assoc_98",
+        "credset_id": "credset_98",
+        "title": "Mean diameter for HDL particles GWAS"
+    },
+    {
+        "log": "assoc_99:log_pvalue",
+        "ids": 99,
+        "assoc_id": "assoc_99",
+        "credset_id": "credset_99",
+        "title": "Total cholesterol in IDL GWAS"
+    },
+    {
+        "log": "assoc_100:log_pvalue",
+        "ids": 100,
+        "assoc_id": "assoc_100",
+        "credset_id": "credset_100",
+        "title": "Free cholesterol in IDL GWAS"
+    },
+    {
+        "log": "assoc_101:log_pvalue",
+        "ids": 101,
+        "assoc_id": "assoc_101",
+        "credset_id": "credset_101",
+        "title": "Concentration of IDL particles GWAS"
+    },
+    {
+        "log": "assoc_102:log_pvalue",
+        "ids": 102,
+        "assoc_id": "assoc_102",
+        "credset_id": "credset_102",
+        "title": "Phospholipids in IDL GWAS"
+    },
+    {
+        "log": "assoc_103:log_pvalue",
+        "ids": 103,
+        "assoc_id": "assoc_103",
+        "credset_id": "credset_103",
+        "title": "Triglycerides in IDL GWAS"
+    },
+    {
+        "log": "assoc_104:log_pvalue",
+        "ids": 104,
+        "assoc_id": "assoc_104",
+        "credset_id": "credset_104",
+        "title": "Total cholesterol in large HDL GWAS"
+    },
+    {
+        "log": "assoc_105:log_pvalue",
+        "ids": 105,
+        "assoc_id": "assoc_105",
+        "credset_id": "credset_105",
+        "title": "Cholesterol esters in large HDL GWAS"
+    },
+    {
+        "log": "assoc_106:log_pvalue",
+        "ids": 106,
+        "assoc_id": "assoc_106",
+        "credset_id": "credset_106",
+        "title": "Free cholesterol in large HDL GWAS"
+    },
+    {
+        "log": "assoc_107:log_pvalue",
+        "ids": 107,
+        "assoc_id": "assoc_107",
+        "credset_id": "credset_107",
+        "title": "Concentration of large HDL particles GWAS"
+    },
+    {
+        "log": "assoc_108:log_pvalue",
+        "ids": 108,
+        "assoc_id": "assoc_108",
+        "credset_id": "credset_108",
+        "title": "Phospholipids in large HDL GWAS"
+    },
+    {
+        "log": "assoc_109:log_pvalue",
+        "ids": 109,
+        "assoc_id": "assoc_109",
+        "credset_id": "credset_109",
+        "title": "Total cholesterol in large LDL GWAS"
+    },
+    {
+        "log": "assoc_110:log_pvalue",
+        "ids": 110,
+        "assoc_id": "assoc_110",
+        "credset_id": "credset_110",
+        "title": "Cholesterol esters in large LDL GWAS"
+    },
+    {
+        "log": "assoc_111:log_pvalue",
+        "ids": 111,
+        "assoc_id": "assoc_111",
+        "credset_id": "credset_111",
+        "title": "Free cholesterol in large LDL GWAS"
+    },
+    {
+        "log": "assoc_112:log_pvalue",
+        "ids": 112,
+        "assoc_id": "assoc_112",
+        "credset_id": "credset_112",
+        "title": "Concentration of large LDL particles GWAS"
+    },
+    {
+        "log": "assoc_113:log_pvalue",
+        "ids": 113,
+        "assoc_id": "assoc_113",
+        "credset_id": "credset_113",
+        "title": "Phospholipids in large LDL GWAS"
+    },
+    {
+        "log": "assoc_114:log_pvalue",
+        "ids": 114,
+        "assoc_id": "assoc_114",
+        "credset_id": "credset_114",
+        "title": "Total cholesterol in large VLDL GWAS"
+    },
+    {
+        "log": "assoc_115:log_pvalue",
+        "ids": 115,
+        "assoc_id": "assoc_115",
+        "credset_id": "credset_115",
+        "title": "Cholesterol esters in large VLDL GWAS"
+    },
+    {
+        "log": "assoc_116:log_pvalue",
+        "ids": 116,
+        "assoc_id": "assoc_116",
+        "credset_id": "credset_116",
+        "title": "Free cholesterol in large VLDL GWAS"
+    },
+    {
+        "log": "assoc_117:log_pvalue",
+        "ids": 117,
+        "assoc_id": "assoc_117",
+        "credset_id": "credset_117",
+        "title": "Concentration of large VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_118:log_pvalue",
+        "ids": 118,
+        "assoc_id": "assoc_118",
+        "credset_id": "credset_118",
+        "title": "Phospholipids in large VLDL GWAS"
+    },
+    {
+        "log": "assoc_119:log_pvalue",
+        "ids": 119,
+        "assoc_id": "assoc_119",
+        "credset_id": "credset_119",
+        "title": "Triglycerides in large VLDL GWAS"
+    },
+    {
+        "log": "assoc_120:log_pvalue",
+        "ids": 120,
+        "assoc_id": "assoc_120",
+        "credset_id": "credset_120",
+        "title": "LDL cholesterol GWAS"
+    },
+    {
+        "log": "assoc_121:log_pvalue",
+        "ids": 121,
+        "assoc_id": "assoc_121",
+        "credset_id": "credset_121",
+        "title": "Mean diameter for LDL particles GWAS"
+    },
+    {
+        "log": "assoc_122:log_pvalue",
+        "ids": 122,
+        "assoc_id": "assoc_122",
+        "credset_id": "credset_122",
+        "title": "Total cholesterol in medium HDL GWAS"
+    },
+    {
+        "log": "assoc_123:log_pvalue",
+        "ids": 123,
+        "assoc_id": "assoc_123",
+        "credset_id": "credset_123",
+        "title": "Cholesterol esters in medium HDL GWAS"
+    },
+    {
+        "log": "assoc_124:log_pvalue",
+        "ids": 124,
+        "assoc_id": "assoc_124",
+        "credset_id": "credset_124",
+        "title": "Free cholesterol in medium HDL GWAS"
+    },
+    {
+        "log": "assoc_125:log_pvalue",
+        "ids": 125,
+        "assoc_id": "assoc_125",
+        "credset_id": "credset_125",
+        "title": "Concentration of medium HDL particles GWAS"
+    },
+    {
+        "log": "assoc_126:log_pvalue",
+        "ids": 126,
+        "assoc_id": "assoc_126",
+        "credset_id": "credset_126",
+        "title": "Phospholipids in medium HDL GWAS"
+    },
+    {
+        "log": "assoc_127:log_pvalue",
+        "ids": 127,
+        "assoc_id": "assoc_127",
+        "credset_id": "credset_127",
+        "title": "Total cholesterol in medium LDL GWAS"
+    },
+    {
+        "log": "assoc_128:log_pvalue",
+        "ids": 128,
+        "assoc_id": "assoc_128",
+        "credset_id": "credset_128",
+        "title": "Cholesterol esters in medium LDL GWAS"
+    },
+    {
+        "log": "assoc_129:log_pvalue",
+        "ids": 129,
+        "assoc_id": "assoc_129",
+        "credset_id": "credset_129",
+        "title": "Concentration of medium LDL particles GWAS"
+    },
+    {
+        "log": "assoc_130:log_pvalue",
+        "ids": 130,
+        "assoc_id": "assoc_130",
+        "credset_id": "credset_130",
+        "title": "Phospholipids in medium LDL GWAS"
+    },
+    {
+        "log": "assoc_131:log_pvalue",
+        "ids": 131,
+        "assoc_id": "assoc_131",
+        "credset_id": "credset_131",
+        "title": "Total cholesterol in medium VLDL GWAS"
+    },
+    {
+        "log": "assoc_132:log_pvalue",
+        "ids": 132,
+        "assoc_id": "assoc_132",
+        "credset_id": "credset_132",
+        "title": "Cholesterol esters in medium VLDL GWAS"
+    },
+    {
+        "log": "assoc_133:log_pvalue",
+        "ids": 133,
+        "assoc_id": "assoc_133",
+        "credset_id": "credset_133",
+        "title": "Free cholesterol in medium VLDL GWAS"
+    },
+    {
+        "log": "assoc_134:log_pvalue",
+        "ids": 134,
+        "assoc_id": "assoc_134",
+        "credset_id": "credset_134",
+        "title": "Concentration of medium VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_135:log_pvalue",
+        "ids": 135,
+        "assoc_id": "assoc_135",
+        "credset_id": "credset_135",
+        "title": "Phospholipids in medium VLDL GWAS"
+    },
+    {
+        "log": "assoc_136:log_pvalue",
+        "ids": 136,
+        "assoc_id": "assoc_136",
+        "credset_id": "credset_136",
+        "title": "Triglycerides in medium VLDL GWAS"
+    },
+    {
+        "log": "assoc_137:log_pvalue",
+        "ids": 137,
+        "assoc_id": "assoc_137",
+        "credset_id": "credset_137",
+        "title": "ApoB/ApoA1 ratio GWAS"
+    },
+    {
+        "log": "assoc_138:log_pvalue",
+        "ids": 138,
+        "assoc_id": "assoc_138",
+        "credset_id": "credset_138",
+        "title": "ApoA1 GWAS"
+    },
+    {
+        "log": "assoc_139:log_pvalue",
+        "ids": 139,
+        "assoc_id": "assoc_139",
+        "credset_id": "credset_139",
+        "title": "ApoB GWAS"
+    },
+    {
+        "log": "assoc_140:log_pvalue",
+        "ids": 140,
+        "assoc_id": "assoc_140",
+        "credset_id": "credset_140",
+        "title": "Concentration of small HDL particles GWAS"
+    },
+    {
+        "log": "assoc_141:log_pvalue",
+        "ids": 141,
+        "assoc_id": "assoc_141",
+        "credset_id": "credset_141",
+        "title": "Triglycerides in small HDL GWAS"
+    },
+    {
+        "log": "assoc_142:log_pvalue",
+        "ids": 142,
+        "assoc_id": "assoc_142",
+        "credset_id": "credset_142",
+        "title": "Total cholesterol in small LDL GWAS"
+    },
+    {
+        "log": "assoc_143:log_pvalue",
+        "ids": 143,
+        "assoc_id": "assoc_143",
+        "credset_id": "credset_143",
+        "title": "Concentration of small LDL particles GWAS"
+    },
+    {
+        "log": "assoc_144:log_pvalue",
+        "ids": 144,
+        "assoc_id": "assoc_144",
+        "credset_id": "credset_144",
+        "title": "Total cholesterol in small VLDL GWAS"
+    },
+    {
+        "log": "assoc_145:log_pvalue",
+        "ids": 145,
+        "assoc_id": "assoc_145",
+        "credset_id": "credset_145",
+        "title": "Free cholesterol in small VLDL GWAS"
+    },
+    {
+        "log": "assoc_146:log_pvalue",
+        "ids": 146,
+        "assoc_id": "assoc_146",
+        "credset_id": "credset_146",
+        "title": "Concentration of small VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_147:log_pvalue",
+        "ids": 147,
+        "assoc_id": "assoc_147",
+        "credset_id": "credset_147",
+        "title": "Phospholipids in small VLDL GWAS"
+    },
+    {
+        "log": "assoc_148:log_pvalue",
+        "ids": 148,
+        "assoc_id": "assoc_148",
+        "credset_id": "credset_148",
+        "title": "Triglycerides in small VLDL GWAS"
+    },
+    {
+        "log": "assoc_149:log_pvalue",
+        "ids": 149,
+        "assoc_id": "assoc_149",
+        "credset_id": "credset_149",
+        "title": "Total triglycerides GWAS"
+    },
+    {
+        "log": "assoc_150:log_pvalue",
+        "ids": 150,
+        "assoc_id": "assoc_150",
+        "credset_id": "credset_150",
+        "title": "Total cholesterol in very large HDL GWAS"
+    },
+    {
+        "log": "assoc_151:log_pvalue",
+        "ids": 151,
+        "assoc_id": "assoc_151",
+        "credset_id": "credset_151",
+        "title": "Cholesterol esters in very large HDL GWAS"
+    },
+    {
+        "log": "assoc_152:log_pvalue",
+        "ids": 152,
+        "assoc_id": "assoc_152",
+        "credset_id": "credset_152",
+        "title": "Free cholesterol in very large HDL GWAS"
+    },
+    {
+        "log": "assoc_153:log_pvalue",
+        "ids": 153,
+        "assoc_id": "assoc_153",
+        "credset_id": "credset_153",
+        "title": "Concentration of very large HDL particles GWAS"
+    },
+    {
+        "log": "assoc_154:log_pvalue",
+        "ids": 154,
+        "assoc_id": "assoc_154",
+        "credset_id": "credset_154",
+        "title": "Phospholipids in very large HDL GWAS"
+    },
+    {
+        "log": "assoc_155:log_pvalue",
+        "ids": 155,
+        "assoc_id": "assoc_155",
+        "credset_id": "credset_155",
+        "title": "Triglycerides in very large HDL GWAS"
+    },
+    {
+        "log": "assoc_156:log_pvalue",
+        "ids": 156,
+        "assoc_id": "assoc_156",
+        "credset_id": "credset_156",
+        "title": "Concentration of very large VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_157:log_pvalue",
+        "ids": 157,
+        "assoc_id": "assoc_157",
+        "credset_id": "credset_157",
+        "title": "Phospholipids in very large VLDL GWAS"
+    },
+    {
+        "log": "assoc_158:log_pvalue",
+        "ids": 158,
+        "assoc_id": "assoc_158",
+        "credset_id": "credset_158",
+        "title": "Triglycerides in very large VLDL GWAS"
+    },
+    {
+        "log": "assoc_159:log_pvalue",
+        "ids": 159,
+        "assoc_id": "assoc_159",
+        "credset_id": "credset_159",
+        "title": "Mean diameter for VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_160:log_pvalue",
+        "ids": 160,
+        "assoc_id": "assoc_160",
+        "credset_id": "credset_160",
+        "title": "Concentration of very small VLDL particles GWAS"
+    },
+    {
+        "log": "assoc_161:log_pvalue",
+        "ids": 161,
+        "assoc_id": "assoc_161",
+        "credset_id": "credset_161",
+        "title": "Phospholipids in very small VLDL GWAS"
+    },
+    {
+        "log": "assoc_162:log_pvalue",
+        "ids": 162,
+        "assoc_id": "assoc_162",
+        "credset_id": "credset_162",
+        "title": "Triglycerides in very small VLDL GWAS"
+    }
+    ]
+}

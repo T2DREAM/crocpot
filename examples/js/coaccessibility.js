@@ -10,7 +10,7 @@ function dega_bed_parser(line, index) {
     // assume format chr1:123-456_GENE or chr1:123-456 (chr prefix optional)
     var second_item = fields[3].match(/^(?:chr)?(\d+):(\d+)-(\d+)(?:_)?(\S+)?$/);
     var score = fields[4];
-    score = (score === '.') ? null : +score;
+    score = (score === '.') ? 1 : +score;
     return {
         // Note: The query is based on position of element 1, not element 2. It's possible for a loop to be in the
         //   region, but the tabix query to not find it.

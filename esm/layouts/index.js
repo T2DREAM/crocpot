@@ -26,6 +26,20 @@ const standard_association_tooltip = {
                  >Make LD Reference</a><br>`,
 };
 
+const association_credible_set_tooltip = {
+    namespace: { 'assoc': 'assoc', 'credset': 'credset' },
+    closable: true,
+    show: { or: ['highlighted', 'selected'] },
+    hide: { and: ['unhighlighted', 'unselected'] },
+    html: `<strong>{{{{namespace[assoc]}}variant|htmlescape}}</strong><br><br>Posterior probability: <strong>{{{{namespace[credset]}}posterior_prob|scinotation|htmlescape}}</strong>
+        P Value: <strong>{{{{namespace[assoc]}}log_pvalue|logtoscinotation|htmlescape}}</strong><br>
+        Ref. Allele: <strong>{{{{namespace[assoc]}}ref_allele|htmlescape}}</strong><br>
+        <a href="javascript:void(0);" 
+        onclick="var data = this.parentNode.__data__;
+                 data.getDataLayer().makeLDReference(data);"
+                 >Make LD Reference</a><br>`,
+};
+
 const standard_association_tooltip_with_label = function() {
     // Add a special "toggle label" button to the base tooltip. This must be used in tandem with a custom layout
     //   directive (label.filters should check a boolean annotation field called "lz_show_label").
@@ -37,7 +51,6 @@ const standard_association_tooltip_with_label = function() {
                   layer.parent_plot.applyState();">Toggle label</a>`;
     return base;
 }();
-
 const standard_genes_tooltip = {
     closable: true,
     show: { or: ['highlighted', 'selected'] },
@@ -91,7 +104,6 @@ const significance_layer = {
     orientation: 'horizontal',
     offset: LZ_SIG_THRESHOLD_LOGP,
 };
-
 const recomb_rate_layer = {
     namespace: { 'recomb': 'recomb' },
     id: 'recombrate',
@@ -193,7 +205,66 @@ const association_pvalues_layer = {
     },
     tooltip: deepCopy(standard_association_tooltip),
 };
-
+const association_credible_set_layer = {
+    namespace: { 'assoc': 'assoc', 'credset': 'credset', 'ld': 'ld' },
+    id: 'associationcredibleset',
+    type: 'scatter',
+    fill_opacity: 0.7,
+    fields: ['{{namespace[assoc]}}variant', '{{namespace[assoc]}}position', '{{namespace[assoc]}}log_pvalue', '{{namespace[assoc]}}log_pvalue|logtoscinotation', '{{namespace[assoc]}}ref_allele', '{{namespace[credset]}}posterior_prob', '{{namespace[credset]}}contrib_fraction', '{{namespace[credset]}}is_member', '{{namespace[ld]}}state', '{{namespace[ld]}}isrefvar'],
+    id_field: '{{namespace[assoc]}}variant',
+    z_index: 2,
+    x_axis: {
+        field: '{{namespace[assoc]}}position',
+    },
+    y_axis: {
+        axis: 1,
+        field: '{{namespace[assoc]}}log_pvalue',
+        floor: 0,
+        upper_buffer: 0.10,
+        min_extent: [0, 10],
+    },
+    color: {
+        field: '{{namespace[credset]}}is_member',
+        scale_function: 'if',
+        parameters: {
+            field_value: true,
+            then: '#00CC00',
+            else: '#CCCCCC',
+        },
+    },
+    legend: [
+        {
+            shape: 'circle',
+            color: '#00CC00',
+            size: 40,
+            label: 'In credible set',
+            class: 'lz-data_layer-scatter',
+        },
+        {
+            shape: 'circle',
+            color: '#CCCCCC',
+            size: 40,
+            label: 'Not in credible set',
+            class: 'lz-data_layer-scatter',
+        },
+    ],
+    label: null,
+    behaviors: {
+        onmouseover: [
+            { action: 'set', status: 'highlighted' },
+        ],
+        onmouseout: [
+            { action: 'unset', status: 'highlighted' },
+        ],
+        onclick: [
+            { action: 'toggle', status: 'selected', exclusive: true },
+        ],
+        onshiftclick: [
+            { action: 'toggle', status: 'selected' },
+        ],
+    },
+    tooltip: deepCopy(association_credible_set_tooltip),
+};
 const coaccessibility_layer = {
     namespace: { 'access': 'access' },
     id: 'coaccessibility',
@@ -204,13 +275,14 @@ const coaccessibility_layer = {
     filters: [
         { field: '{{namespace[access]}}score', operator: '!=', value: null },
     ],
+    tooltip: deepCopy(coaccessibility_tooltip),
     color: [
         {
             field: 'lz_highlight_match', // Special field name whose presence triggers custom rendering
             scale_function: 'if',
             parameters: {
                 field_value: true,
-                then: '#ff0000',
+                then: '#ffa726',
             },
         },
         {
@@ -218,7 +290,7 @@ const coaccessibility_layer = {
             scale_function: 'if',
             parameters: {
                 field_value: false,
-                then: '#EAE6E6',
+                then: 'rgba(192,192,192,0.2)',
             },
         },
         {
@@ -252,9 +324,8 @@ const coaccessibility_layer = {
             { action: 'toggle', status: 'selected' },
         ],
     },
-    tooltip: deepCopy(coaccessibility_tooltip),
+    //tooltip: deepCopy(coaccessibility_tooltip),
 };
-
 const association_pvalues_catalog_layer = function () {
     // Slightly modify an existing layout
     let base = deepCopy(association_pvalues_layer);
@@ -275,7 +346,7 @@ const phewas_pvalues_layer = {
     id_field: '{{namespace[phewas]}}id',
     fields: ['{{namespace[phewas]}}id', '{{namespace[phewas]}}log_pvalue', '{{namespace[phewas]}}trait_group', '{{namespace[phewas]}}trait_label'],
     x_axis: {
-        field: '{{namespace[phewas]}}x',  // Synthetic/derived field added by `category_scatter` layer
+        field: '{{namespace[phewas]}}x',
         category_field: '{{namespace[phewas]}}trait_group',
         lower_buffer: 0.025,
         upper_buffer: 0.025,
@@ -367,17 +438,11 @@ const genes_layer = {
     },
     tooltip: deepCopy(standard_genes_tooltip),
 };
-
 const genes_layer_filtered = merge({
-    // By default this layer doesn't show everything. Often used in tandem with a panel-level toolbar "show all" button.
     filters: [
         {
             field: 'gene_type',
             operator: 'in',
-            // A manually curated subset of Gencode biotypes, based on user suggestions
-            //  See full list: https://www.gencodegenes.org/human/stats.html
-            // This is approximately intended to cover elements of generally known function, and exclude things
-            //  like pseudogenes.
             value: [
                 'protein_coding',
                 'IG_C_gene', 'IG_D_gene', 'IG_J_gene', 'IG_V_gene',
@@ -388,8 +453,6 @@ const genes_layer_filtered = merge({
         },
     ],
 }, deepCopy(genes_layer));
-
-
 const annotation_catalog_layer = {
     // Identify GWAS hits that are present in the GWAS catalog
     namespace: { 'assoc': 'assoc', 'catalog': 'catalog' },
@@ -452,13 +515,12 @@ const ldlz2_pop_selector_menu = {
         { display_name: 'SAS', value: 'SAS' },
     ],
 };
-
 const gene_selector_menu = {
     type: 'display_options',
     position: 'right',
     color: 'blue',
     // Below: special config specific to this widget
-    button_html: 'Filter...',
+    button_html: 'Select...',
     button_title: 'Choose which genes to show',
     layer_name: 'genes',
     default_config_display_name: 'Coding genes & rRNA',
@@ -471,7 +533,6 @@ const gene_selector_menu = {
         },
     ],
 };
-
 /**
  * Toolbar Layouts: Collections of toolbar buttons etc
  */
@@ -498,7 +559,7 @@ const standard_panel_toolbar = {
 };
 
 const standard_plot_toolbar = {
-    // Suitable for most any type of plot drawn with LZ. Title and download buttons.
+    // Suitable for most any type of plot drawn with LZ
     widgets: [
         {
             type: 'title',
@@ -518,16 +579,13 @@ const standard_plot_toolbar = {
         },
     ],
 };
-
 const standard_association_toolbar = function () {
     // Suitable for association plots (adds a button for LD data)
     const base = deepCopy(standard_plot_toolbar);
     base.widgets.push(deepCopy(ldlz2_pop_selector_menu));
     return base;
 }();
-
 const region_nav_plot_toolbar = function () {
-    // Generic region nav buttons
     const base = deepCopy(standard_plot_toolbar);
     base.widgets.push(
         {
@@ -576,6 +634,7 @@ const region_nav_plot_toolbar = function () {
 /**
  * Panel Layouts
  */
+
 
 const association_panel = {
     id: 'association',
@@ -629,7 +688,52 @@ const association_panel = {
         deepCopy(association_pvalues_layer),
     ],
 };
-
+const association_credible_set_panel = {
+    id: 'associationcrediblesets',
+    width: 800,
+    height: 225,
+    min_width: 400,
+    min_height: 200,
+    proportional_width: 1,
+    margin: { top: 35, right: 50, bottom: 40, left: 50 },
+    inner_border: 'rgb(210, 210, 210)',
+    toolbar: (function () {
+        const base = deepCopy(standard_panel_toolbar);
+        base.widgets.push({
+            type: 'toggle_legend',
+            position: 'right',
+        });
+        return base;
+    })(),
+    axes: {
+        x: {
+            label: 'Chromosome {{chr}} (Mb)',
+            label_offset: 32,
+            tick_format: 'region',
+            extent: 'state',
+        },
+        y1: {
+            label: '-log10 p-value',
+            label_offset: 28,
+        },
+    },
+    legend: {
+        orientation: 'vertical',
+        origin: { x: 55, y: 40 },
+        hidden: true,
+    },
+    interaction: {
+        drag_background_to_pan: true,
+        drag_x_ticks_to_scale: true,
+        drag_y1_ticks_to_scale: true,
+        drag_y2_ticks_to_scale: true,
+        scroll_to_zoom: true,
+        x_linked: true,
+    },
+    data_layers: [
+        deepCopy(association_credible_set_layer),
+    ],
+};
 const coaccessibility_panel = {
     id: 'coaccessibility',
     width: 800,
@@ -639,7 +743,19 @@ const coaccessibility_panel = {
     proportional_width: 1,
     margin: { top: 35, right: 50, bottom: 40, left: 50 },
     inner_border: 'rgb(210, 210, 210)',
-    toolbar: deepCopy(standard_panel_toolbar),
+    toolbar: ( function () {
+        const base = deepCopy(standard_panel_toolbar);
+        base.widgets.push({
+            type: 'filter_field',
+            position: 'right',
+            layer_name: 'coaccessibility',
+            field: '{{namespace[access]}}score',
+            field_display_html: 'Score',
+            operator: '>=',
+            data_type: 'number',
+        });
+        return base;
+    })(),
     axes: {
         x: {
             label: 'Chromosome {{chr}} (Mb)',
@@ -650,7 +766,7 @@ const coaccessibility_panel = {
         y1: {
             label: 'Score',
             label_offset: 28,
-            render: false,  // We are mainly concerned with the relative magnitudes: hide y axis to avoid clutter.
+            render: true,  // We are mainly concerned with the relative magnitudes: hide y axis to avoid clutter.
         },
     },
     interaction: {
@@ -750,7 +866,7 @@ const genes_panel = {
         return base;
     })(),
     data_layers: [
-        deepCopy(genes_layer_filtered),
+        deepCopy(genes_layer),
     ],
 };
 
@@ -870,12 +986,8 @@ const coaccessibility_plot = {
     responsive_resize: true,
     min_region_scale: 20000,
     max_region_scale: 1000000,
-    toolbar: deepCopy(standard_plot_toolbar),
+    toolbar: deepCopy(region_nav_plot_toolbar),
     panels: [
-        Object.assign(
-            { proportional_height: 0.4 },
-            deepCopy(coaccessibility_panel)
-        ),
         function () {
             // Take the default genes panel, and add a custom feature to highlight gene tracks based on short name
             // This is a companion to the "match" directive in the coaccessibility panel
@@ -891,7 +1003,7 @@ const coaccessibility_plot = {
                     scale_function: 'if',
                     parameters: {
                         field_value: true,
-                        then: '#ff0000',
+                        then: '#ffa726',
                     },
                 },
                 {
@@ -899,7 +1011,7 @@ const coaccessibility_plot = {
                     scale_function: 'if',
                     parameters: {
                         field_value: false,
-                        then: '#EAE6E6',
+                        then: 'rgba(0,0,0,0.0)',
                     },
                 },
                 '#363696',
@@ -922,7 +1034,6 @@ export const tooltip = {
 
 export const toolbar_widgets = {
     ldlz2_pop_selector: ldlz2_pop_selector_menu,
-    gene_selector_menu,
 };
 
 export const toolbar = {
@@ -936,6 +1047,7 @@ export const data_layer = {
     significance: significance_layer,
     recomb_rate: recomb_rate_layer,
     association_pvalues: association_pvalues_layer,
+    association_credible: association_credible_set_layer,
     coaccessibility: coaccessibility_layer,
     association_pvalues_catalog: association_pvalues_catalog_layer,
     phewas_pvalues: phewas_pvalues_layer,
@@ -946,6 +1058,7 @@ export const data_layer = {
 
 export const panel = {
     association: association_panel,
+    association_credible: association_credible_set_panel,
     coaccessibility: coaccessibility_panel,
     association_catalog: association_catalog_panel,
     genes: genes_panel,

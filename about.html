@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">  
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">  
+  <!-- Necessary includes for LocusZoom.js -->
+ <script src="https://cdn.jsdelivr.net/npm/d3@^5.16.0" type="text/javascript"></script>
+ <script src="./dist/locuszoom.app.min.js" type="text/javascript"></script>
+ <script type="application/javascript" src="./dist/ext/lz-dynamic-urls.min.js"></script>
+  
+  <link rel="stylesheet" href="./dist/locuszoom.css" type="text/css"/>
+  <!-- Additional standalone code required for credible set calculations; not part of base LZjs -->
+  <script type="application/javascript" src="https://unpkg.com/gwas-credible-sets@0.1.0/dist/gwas-credible-sets.min.js" integrity="sha384-lJL/xQT18Xu6GVovitlKgX4kL8hw6YfgLGVM5PWcFUMe+tfvznEwsJlauLzB1AnQ" crossorigin="anonymous"></script>
+  <script type="application/javascript" src="./dist/ext/lz-credible-sets.min.js"></script>
+  <!-- Load tabix reader form a CDN  -->
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/tabix-reader@~1.0.0"
+          crossorigin="anonymous"></script>
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="application/javascript" src="./dist/ext/lz-tabix-source.min.js"></script>
+  <script src="./examples/js/coaccessibility.js" type="application/javascript"></script>
+  <script src="./examples/js/region-search.js" type="application/javascript"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <title>CROCPOT</title>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+      margin: 10px 20px;
+    }
+
+    img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .dropbtn {
+  background-color: #ffa726;
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #eb9d2a;
+}
+    .submit {
+  background-color: #ffa726;
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit:hover, .submit:focus {
+  background-color: #eb9d2a;
+}
+.Input {
+  box-sizing: content-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  width: 100%;  
+  border-bottom: 1px solid #ddd;
+}
+
+.Input:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  overflow: auto;
+  height: 180px;
+  font-size: 10px;  
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+  </style>
+  <!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+  
+</head>
+
+<body>
+<div class="container">
+  <h3 style="margin-top: 1em;"><strong>CROCPOT</strong></h3>
+  <h6 style="float: left; color: #777">ChROmatin-based Collection of Predicted Target genes</h6>
+  <hr style="clear: both;">
+  <p>CROCPOT is genome browser to visualize chromatin studies such as “C” techniques and single cell chromatin accessibility assays. It builds on Locuszoom.js. The genome browser has a) Long range interaction track b) Fine mapping/credible sets track and c) Gene track.</p>
+  <p>The key objective of CROCPOT is to associate regulatory elements involved with long range interactions with causal variant and its target gene that will help understand spatial organization of genome in normal physiology and progression of (co)morbidity; as well as help prioritize expensive and time consuming functional assays.</p>
+      <div class="row">
+        <footer style="text-align: center;">
+          &copy; Copyright <script>document.write(new Date().getFullYear())</script>  Regents of the University of California.<br>
+	</footer>
+      </div>
+</div>
+<script>
+$.get("nav.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});  
+</script>  
+</body>
+</html>

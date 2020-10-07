@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">  
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">  
+  <!-- Necessary includes for LocusZoom.js -->
+ <script src="https://cdn.jsdelivr.net/npm/d3@^5.16.0" type="text/javascript"></script>
+ <script src="./dist/locuszoom.app.min.js" type="text/javascript"></script>
+ <script type="application/javascript" src="./dist/ext/lz-dynamic-urls.min.js"></script>
+  
+  <link rel="stylesheet" href="./dist/locuszoom.css" type="text/css"/>
+  <!-- Additional standalone code required for credible set calculations; not part of base LZjs -->
+  <script type="application/javascript" src="https://unpkg.com/gwas-credible-sets@0.1.0/dist/gwas-credible-sets.min.js" integrity="sha384-lJL/xQT18Xu6GVovitlKgX4kL8hw6YfgLGVM5PWcFUMe+tfvznEwsJlauLzB1AnQ" crossorigin="anonymous"></script>
+  <script type="application/javascript" src="./dist/ext/lz-credible-sets.min.js"></script>
+  <!-- Load tabix reader form a CDN  -->
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/tabix-reader@~1.0.0"
+          crossorigin="anonymous"></script>
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="application/javascript" src="./dist/ext/lz-tabix-source.min.js"></script>
+  <script src="./examples/js/coaccessibility.js" type="application/javascript"></script>
+  <script src="./examples/js/region-search.js" type="application/javascript"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <title>CROCPOT</title>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+      margin: 10px 20px;
+    }
+
+    img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .dropbtn {
+  background-color: #ffa726;
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #eb9d2a;
+}
+    .submit {
+  background-color: #ffa726;
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit:hover, .submit:focus {
+  background-color: #eb9d2a;
+}
+.Input {
+  box-sizing: content-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  width: 100%;  
+  border-bottom: 1px solid #ddd;
+}
+
+.Input:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  overflow: auto;
+  height: 180px;
+  font-size: 10px;  
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+table.format tr td {
+    font-size: 14px;
+    }
+  </style>
+  <!--Navbar -->
+  <div id="nav-placeholder">
+
+</div>
+<!--/.Navbar -->  
+</head>
+
+<body>
+<div class="container">
+  <h3 style="margin-top: 1em;"><strong>CROCPOT</strong></h3>
+  <h6 style="float: left; color: #777">ChROmatin-based Collection of Predicted Target genes</h6>
+  <hr style="clear: both;">
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Dnase-Seq/ATAC-Seq/ChIP-seq H3K27ac (ABC)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+	<p>
+	  <b>Method:</b>
+The Activity by Contact (ABC) model is designed to represent a mechanistic model in which enhancers activate gene transcription upon enhancer-promoter contact. In a simple conception of such a model, the quantitative effect of an enhancer depends on the frequency with which it contacts a promoter multiplied by the strength of the enhancer (i.e., the ability of the enhancer to activate transcription upon contacting a promoter). Moreover, the contribution of a specific enhancer to a gene’s expression should depend on the surrounding context (ie, the strength and contact frequency of other enhancers for the gene)
+	<p>
+	  <b>Pipeline:</b>
+	  <a href="https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction" target="_blank">GitHub</a>
+	</p>
+	<p>
+	  <b>Unit for interaction/co-accessibility score:</b>
+	  ABC score for effect of element E on gene G = Activity of E × Contact frequency between E and G / Sum of (Activity × Contact Frequency) over all candidate elements within 5 Mb. Operationally, Activity (A) is defined as the geometric mean of the read counts of DNase-seq and H3K27ac ChIP-seq at an element E, and Contact (C) as the KR normalized Hi-C contact frequency between E and the promoter of gene G. Elements are defined as ~500bp regions centered on DHS peaks. Note that the ABC model only considers candidate elements and genes on the same chromosome. It does not make interchromosomal predictions.
+	</p>
+	<p>
+	  <b>Reference:</b>
+	  <a href="https://www.nature.com/articles/s41588-019-0538-0" target="_blank">Activity-by-contact model of enhancer–promoter regulation from thousands of CRISPR perturbations</a>
+	</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         sciATAC/snATAC (Cicero)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+	<p>
+	<b>Method</b>
+	Cicero is an R package that provides tools for analyzing single-cell chromatin accessibility experiments. The main function of Cicero is to use single-cell chromatin accessibility data to predict cis-regulatory interactions (such as those between enhancers and promoters) in the genome by examining co-accessibility. In addition, Cicero extends Monocle to allow clustering, ordering, and differential accessibility analysis of single cells using chromatin accessibility.
+	</p>
+	<p>
+	<b>Pipeline:</b>
+	<a href="https://github.com/kjgaulton/pipelines/tree/master/snATAC-seq" target="_blank">GitHub</a>  
+	</p>
+	<p>
+	<b>Unit for interaction/co-accessibility score:</b>
+	Score between -1 and 1 between each pair of accessibile peaks within a user defined distance where a higher number indicates higher co-accessibility
+	</p>
+	<p>
+	<b>Reference:</b>
+	<a href="https://doi.org/10.1016/j.molcel.2018.06.044" target="_blank">Cicero Predicts cis-Regulatory DNA Interactions from Single-Cell Chromatin Accessibility Data</a>
+	</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         pcHi-C (CHICAGO)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+	<p>
+<b>Method</b>
+CHiCAGO uses a convolution background model accounting for both random ‘Brownian collisions’ between chromatin fragments (that are distance-dependent) and ‘technical noise’. It borrows information across interactions (with appropriate normalisation) to estimate these background components separately on different subsets of data.
+
+CHiCAGO then performs a p-value weighting procedure based on the expected true positive rates at different distance ranges (estimated from data), with scores representing soft-thresholded -log weighted p-values. 	  
+	</p>
+	<p>
+	<b>Pipeline:</b>
+	<a href="https://bitbucket.org/chicagoTeam/chicago" target="_blank">GitHub</a>  
+	</p>
+	<p>
+	  <b>Unit for interaction/co-accessibility score:</b>
+	  CHiCAGO uses a convolution background model accounting for both random ‘Brownian collisions’ between chromatin fragments (that are distance-dependent) and ‘technical noise’. It borrows information across interactions (with appropriate normalisation) to estimate these background components separately on different subsets of data. CHiCAGO then performs a p-value weighting procedure based on the expected true positive rates at different distance ranges (estimated from data), with scores representing soft-thresholded -log weighted p-values. Specifically, the score is max(−log(p) + log(w) − log(w max ), 0), where w max is the maximum attainable weight, corresponding to zero distance. For the downstream analyses in the original paper, interactions with CHiCAGO scores ≥5 were considered as “significant interactions”.
+	</p>
+	<p>
+	<b>Reference:</b>
+	<a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0992-2" target="_blank">CHiCAGO: robust detection of DNA looping interactions in Capture Hi-C data</a>
+	</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingfour">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         HiChIP/PLAC-seq (MAPS)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+	<p>
+	<b>Method</b>
+	MAPS, Model-based Analysis of PLAC-seq and HiChIP, to process the data from such experiments and identify long-range chromatin interactions. MAPS adopts a zero-truncated Poisson regression framework to explicitly remove systematic biases in the PLAC-seq and HiChIP datasets, and then uses the normalized chromatin contact frequencies to identify significant chromatin interactions anchored at genomic regions bound by the protein of interest. MAPS shows superior performance over existing software tools in the analysis of chromatin interactions from multiple PLAC-seq and HiChIP datasets centered on different transcriptional factors and histone marks.  
+	</p>
+	<p>
+	<b>Pipeline:</b>
+	<a href="https://github.com/ijuric/MAPS" target="_blank">GitHub</a>  
+	</p>
+	<p>
+	  <b>Unit for interaction/co-accessibility score:</b>
+	MAPS adopts a zero-truncated Poisson regression framework to explicitly remove systematic biases in the PLAC-seq and HiChIP datasets, and then uses the normalized chromatin contact frequencies to identify significant chromatin interactions anchored at genomic regions bound by the protein of interest.  
+	</p>
+	<p>
+	<b>Reference:</b>
+	<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006982" target="_blank">MAPS: Model-based analysis of long-range chromatin interactions from PLAC-seq and HiChIP experiments</a>
+	</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+         ChIA-PET (ChIA-PIPE)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+	<p>
+	<b>Method</b>
+	ChIA-PET (chromatin interaction analysis with paired-end tags) enables genome-wide discovery of chromatin interactions involving specific protein factors, with base pair resolution. Interpretation of ChIA-PET data requires a robust analytic pipeline. ChIA-PIPE, a fully automated pipeline for ChIA-PET data processing, quality assessment, visualization, and analysis. ChIA-PIPE performs linker filtering, read mapping, peak calling, and loop calling and automates quality control assessment for each dataset. To enable visualization, ChIA-PIPE generates input files for two-dimensional contact map viewing with Juicebox and HiGlass and provides a new dockerized visualization tool for high-resolution, browser-based exploration of peaks and loops. To enable structural interpretation, ChIA-PIPE calls chromatin contact domains, resolves allele-specific peaks and loops, and annotates enhancer-promoter loops. ChIA-PIPE also supports the analysis of other related chromatin-mapping data types.  
+	</p>
+	<p>
+	  <b>Unit for interaction/co-accessibility score:</b>
+	  Binding enrichment score
+	</p>
+	<p>
+	<b>Reference:</b>
+	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7439456/" target="_blank">ChIA-PIPE: A fully automated pipeline for comprehensive ChIA-PET data analysis and visualization</a>
+	</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+         4C (4C-ker)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+	<p>
+        <b>Method</b>
+	4C-ker, a Hidden-Markov Model based pipeline that identifies regions throughout the genome that interact with the 4C bait locus.  
+	</p>
+	<p>
+	<b>Pipeline:</b>
+	<a href="https://github.com/rr1859/R.4Cker" target="_blank">GitHub</a>  
+	</p>
+	<p>
+	  <b>Unit for interaction/co-accessibility score:</b>
+	  Similarity Score
+	</p>
+	<p>
+	<b>Reference:</b>
+	<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004780" target="_blank">4C-ker: A Method to Reproducibly Identify Genome-Wide Interactions Captured by 4C-Seq Experiments</a>
+	</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingSeven">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+         Hi-C (HiCCUPS)
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+      <div class="card-body">
+		<p>
+	<b>Method</b>
+	HiCCUPS is an algorithm for finding chromatin loops.	  
+	</p>
+	<p>
+	<b>Pipeline:</b>
+	<a href="https://github.com/ren-lab/hic-pipeline" target="_blank">GitHub</a>  
+	</p>
+	<p>
+	  <b>Unit for interaction/co-accessibility score:</b>
+	  Hi-C Computational Unbiased Peak Search (HiCCUPS) is designed to reduce the rate of false positives and produce maximally reliable peak annotations. HiCCUPS calculates multiple local expectation values for every pixel in order to rule out the possibility that another local feature, such as the edge of a domain, could lead to a spurious, peak-like enrichment. HiCCUPS uses a modified Benjamini-Hochberg FDR control procedure, dubbed “λchunking,” which is specifically designed to work with the unique statistical structure of Hi-C data and rigorously enforces thresholds of local enrichment.
+	</p>
+	<p>
+	<b>Reference:</b>
+	<a href="https://www.cell.com/cell/fulltext/S0092-8674(14)01497-4" target="_blank">A 3D Map of the Human Genome at Kilobase Resolution Reveals Principles of Chromatin Looping</a>
+	</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+      <div class="row">
+        <footer style="text-align: center;">
+          &copy; Copyright <script>document.write(new Date().getFullYear())</script>  Regents of the University of California.<br>
+        </footer>
+      </div>
+
+    </div>
+<script>
+$.get("nav.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});  
+</script>  
+</body>
+</html>
