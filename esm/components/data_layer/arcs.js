@@ -107,7 +107,6 @@ class Arcs extends BaseDataLayer {
 
         const x1 = tooltip.data[layout.x_axis.field1];
         const x2 = tooltip.data[layout.x_axis.field2];
-
         const y_scale = panel[`y${layout.y_axis.axis}_scale`];
 
         return {

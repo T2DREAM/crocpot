@@ -1,0 +1,2686 @@
+{
+    "data":[
+    {
+      "annotation_id": "DSR462PPV",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "pancreas",
+      "dbxrefs": [
+        "GEO:GSE87112",
+        "GEO:GSM2322550",
+        "GEO:GSM2322549",
+        "GEO:GSM2322548",
+        "GEO:GSM2322547"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2016.10.061",
+        "PMID:27851967"
+      ]
+    },
+    {
+      "annotation_id": "DSR453PFX",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "cardiomyocytes (cardiac muscle cell)",
+      "dbxrefs": [
+        "GEO:GSE106690",
+        "GEO:GSM2845454",
+        "GEO:GSM2845455"
+      ],
+      "publications": [
+        "doi:10.1038/s41467-019-09483-5",
+        "PMID:30948719"
+      ]
+    },
+    {
+      "annotation_id": "DSR771SNY",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "heart",
+      "dbxrefs": [
+        "GEO:GSE106690"
+      ],
+      "publications": [
+        "doi:10.1038/s41467-019-09483-5",
+        "PMID:30948719"
+      ]
+    },
+    {
+      "annotation_id": "DSR608ZFL",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "B cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR284RGT",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "other",
+      "biosample_term_name": "adult endothelial progenitor cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR001ISW",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "gastric (mucosa of stomach)",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR134TJY",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "adrenal gland",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR492SZZ",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "heart right ventricle",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR304SKW",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "pancreas",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR362JPD",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "fibroblast cell line",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR063XFX",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "lung",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR751JBO",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "ovary",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR958TQK",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "right cardiac atrium",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR466XKB",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "small intestine",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR499JJX",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "monocyte",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR621NRD",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "inflammatory macrophage",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR625WQC",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "thymus",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR452SBJ",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "aorta",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR727XIO",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "neural progenitor cell (neural stem cell)",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR788UJU",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "adipose tissue",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR579JEW",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "mesendoderm",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR172XCI",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "esophagus",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR973NJR",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "naive thymus-derived CD8-positive, alpha-beta T cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR074OIQ",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "sigmoid colon",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR924VVL",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "neutrophil",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR317OWD",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "macrophage",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR617WXQ",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "erythroblast",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR499URQ",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "HepG2",
+      "dbxrefs": [],
+      "publications": [
+        "doi:10.1016/j.ajhg.2019.05.010",
+        "PMID:31204013"
+      ]
+    },
+    {
+      "annotation_id": "DSR355DOK",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "white adipose cell",
+      "dbxrefs": [
+        "GEO:GSE110619"
+      ],
+      "publications": [
+        "doi:10.1038/s41467-018-03554-9",
+        "PMID:30135520"
+      ]
+    },
+    {
+      "annotation_id": "DSR992TVD",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "megakaryocyte",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR105LDS",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "alternatively activated macrophage",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR181ORU",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "trophoblast",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR929DUM",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "embryonic stem cell",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR267YBK",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "CD4-positive, alpha-beta T cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR279CYO",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "naive B cel",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR843OUB",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "activated CD4-positive, alpha-beta T cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR634RKB",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "bladder (urinary bladder)",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR666FEH",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "spleen",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR890JAM",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "Ammon's horn",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR991ZOB",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "lymphocyte of B lineage (iPSC)",
+      "dbxrefs": [],
+      "publications": [
+        "doi:10.7554/eLife.35788.001",
+        "PMID:29988018"
+      ]
+    },
+    {
+      "annotation_id": "DSR854NSN",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "cardiomyocytes (cardiac muscle cell)",
+      "dbxrefs": [],
+      "publications": [
+        "doi:10.7554/eLife.35788.001",
+        "PMID:29988018"
+      ]
+    },
+    {
+      "annotation_id": "DSR215MEP",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "cardiac precursors (cardiac muscle cell)",
+      "dbxrefs": [
+        "GEO:GSM2845452",
+        "GEO:GSM2845453",
+        "GEO:GSE106690"
+      ],
+      "publications": [
+        "doi:10.1038/s41467-019-09483-5",
+        "PMID:30948719"
+      ]
+    },
+    {
+      "annotation_id": "DSR360WGG",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "dorsolateral prefrontal cortex",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR149GJC",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "thymus",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR694YUN",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "psoas muscle",
+      "dbxrefs": [
+        "GEO:GSE87112",
+        "GEO:GSM2322551"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2016.10.061",
+        "PMID:27851967"
+      ]
+    },
+    {
+      "annotation_id": "DSR495KYA",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "heart left ventricle",
+      "dbxrefs": [
+        "GEO:GSE87112",
+        "GEO:GSM1419085"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2016.10.061",
+        "PMID:27851967"
+      ]
+    },
+    {
+      "annotation_id": "DSR254XKD",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "heart right ventricle",
+      "dbxrefs": [
+        "GEO:GSM2322554",
+        "GEO:GSE87112"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2016.10.061",
+        "PMID:27851967"
+      ]
+    },
+    {
+      "annotation_id": "DSR603PAJ",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "CD8-positive, alpha-beta T cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR758ILS",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "heart left ventricle",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR333DPA",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "mesenchymal stem cell",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR697CGG",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "psoas muscle",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR532XSI",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR574MPN",
+      "annotation_method": "CHiCAGO",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "CD4-positive, alpha-beta T cell",
+      "dbxrefs": [
+        "https://osf.io/u8tzp"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2016.09.037",
+        "PMID:27863249",
+        "PMCID:PMC5123897"
+      ]
+    },
+    {
+      "annotation_id": "DSR804DQM",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "cardiomyocytes (cardiac muscle cell)",
+      "dbxrefs": [],
+      "publications": [
+        "doi:10.7554/eLife.35788.001",
+        "PMID:29988018"
+      ]
+    },
+    {
+      "annotation_id": "DSR735RYC",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "psoas muscle",
+      "dbxrefs": [
+        "GEO:GSE87112",
+        "GEO:GSM2322553",
+        "GEO:GSM2322552"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2016.10.061",
+        "PMID:27851967"
+      ]
+    },
+    {
+      "annotation_id": "DSR870IAS",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "B-lymphoblastoid cell line",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR360EAO",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "lymphocyte of B lineage (iPSC)",
+      "dbxrefs": [],
+      "publications": [
+        "doi:10.7554/eLife.35788.001",
+        "PMID:29988018"
+      ]
+    },
+    {
+      "annotation_id": "DSR428FCH",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "aorta",
+      "dbxrefs": [
+        "GEO:GSM1419084",
+        "GEO:GSE87112"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2016.10.061",
+        "PMID:27851967"
+      ]
+    },
+    {
+      "annotation_id": "DSR049KAF",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "endothelial cell of umbilical vein",
+      "dbxrefs": [
+        "GEO:GSE63525"
+      ],
+      "publications": [
+        "doi:10.1016/j.cell.2014.11.021",
+        "PMID:25497547"
+      ]
+    },
+    {
+      "annotation_id": "DSR373FUA",
+      "annotation_method": "HiCCUPS",
+      "annotation_type": "target gene predictions",
+      "assay_type": "Hi-C",
+      "biosample_term_name": "EndoC_BH1",
+      "dbxrefs": [
+        "GEO:GSE118588"
+      ],
+      "publications": [
+        "doi:10.1016/j.celrep.2018.12.083",
+        "PMID:30650367"
+      ]
+    },
+    {
+      "annotation_id": "DSR605JRF",
+      "annotation_method": "noSpecificSoft_customCode",
+      "annotation_type": "target gene predictions",
+      "assay_type": "pCHi-C",
+      "biosample_term_name": "liver",
+      "dbxrefs": [
+        "GEO:GSE86189"
+      ],
+      "publications": [
+        "doi:10.1038/s41588-019-0494-8",
+        "PMID:31501517"
+      ]
+    },
+    {
+      "annotation_id": "DSR357IHY",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "neuronal stem cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR250DDG",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "trophoblast cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR474NZP",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "skeletal muscle myoblast",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR777OUF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adrenal gland",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR784TGC",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "endothelial cell of umbilical vein",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR823EJW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR094TTW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR028TMR",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "Jurkat",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR563FIF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "LNCAP",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR599YMO",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "dendritic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR406UXU",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR619BAN",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "spleen",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR893IIE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR909VWD",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "cardiac ventricle",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR128CAW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR091RQH",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR330HPF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "muscle of leg",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR139DEL",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "B cell, CD19-positive",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR486DHW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "H7-hESC",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR864GMH",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "MCF 10A cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR503RPF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR781LHW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR117MIS",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "GM12878",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR405NVR",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "beige adipocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR821UNZ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "stomach",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR769NVM",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR200CTI",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "THP-1",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR083FZH",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR594LRQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "myotube",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR117IFB",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR233ZIX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "coronary artery",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR143KXJ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "B cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR262RCW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adrenal gland",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR695JEB",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "NCCIT cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR132FCP",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "dendritic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR046SIQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "dendritic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR739CIN",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR987IVA",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR632XJX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "thyroid gland",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR255DSD",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adipose tissue",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR645VYT",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD4-positive helper T cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR734DGW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "gastrocnemius medialis",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR120LQF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR876RQU",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "erythroblast",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR015NPU",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "dendritic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR868VDX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR593OAU",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "psoas muscle",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR506HNX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "foreskin fibroblast",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR096TII",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "U937",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR363VEB",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "HeLa-S3",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR412LFE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "K562",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR293FCZ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "A673",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR213AOJ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pancreas",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR515WUM",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "small intestine",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR199UUA",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "common myeloid progenitor, CD34-positive",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR804GYF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "BJAB",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR051SJQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pancreatic ductal cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR485QCY",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD8-positive, alpha-beta T cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR273PHJ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "BJAB",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR988OGT",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "Panc1",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR544HLF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "iPS DF 19.11",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR109CTD",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "bipolar neuron",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR941KCA",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adipocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR510YWQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "A549",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR397ZRH",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD4-positive helper T cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR612QOX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR988JBC",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "PC-9",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR770UIC",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "MDA-MB-231 cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR797VJC",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "HT-29 cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR031ZTG",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "astrocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR154QOI",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "LoVo",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR627FCC",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "macrophage",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR606LHI",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR039HOA",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adipocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR922GBW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "H1-hESC",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR494KQG",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "liver",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR737ZLE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR164LWB",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adipocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR371RIS",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR700MOO",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR118ZZL",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "thymus",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR695DBX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "THP-1",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR016HEL",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "MCF 10A cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR232GSH",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "large intestine",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR553CQY",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR982CMQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "T-cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR694OVG",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "dendritic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR344TRK",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR130JFC",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "cardiac muscle cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR069ZRF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "osteoblast",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR670BGX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "Jurkat",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR355NCA",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "HCT116",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR266GVV",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "SK-N-SH",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR155AOX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "HAP-1",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR815AUF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR604IOP",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "hepatocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR886XYE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "smooth muscle cell of the coronary artery",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR064TPU",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "MM.1S",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR384JYX",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "induced pluripotent stem cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR254PVY",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "uterus",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR208GDM",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "megakaryocyte-erythroid progenitor cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR932LQZ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "mesendoderm",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR708OVK",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD56-positive, CD161-positive immature natural killer cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR633DNL",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "type B pancreatic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR627NNY",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "fibroblast of dermis",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR379EHB",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "mammary epithelial cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR507RTA",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pituitary stalk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR408DBU",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "stomach",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR249DLQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "MCF-7",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR651DDS",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "HepG2",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR549DHG",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "dendritic cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR328CUT",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pancreatic acinar cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR303OXY",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR118KLN",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "H9",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR097EPN",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "breast epithelium",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR666YAE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "OCI-LY7",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR524YND",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "spinal cord",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR547QBE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "ovary",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR252OJH",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "fibroblast of arm",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR831KJP",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "placenta",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR926EGV",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "keratinocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR692JFQ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "transverse colon",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR284ZHE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "sigmoid colon",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR010MEO",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "U937",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR170XIW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "mesenchymal stem cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR715HCI",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "pancreatic A cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR497YZL",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "body of pancreas",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR764OIT",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "muscle of trunk",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR319ZJZ",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "fibroblast of lung",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR895REE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "IMR-90",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR630TXR",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "trophoblast cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR093BCO",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "Karpas 422",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR199TJW",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD14-positive monocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR598LAB",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "natural killer cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR542JXE",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "adipocyte",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR327KAR",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "epithelial cell of prostate",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR719JYF",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "white adipose tissue",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR331JNK",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "T-cell",
+      "dbxrefs": [],
+      "publications": []
+    },
+    {
+      "annotation_id": "DSR886AVL",
+      "annotation_method": "ABC",
+      "annotation_type": "target gene predictions",
+      "assay_type": [
+        "DNase-seq",
+        "ATAC-seq",
+        "H3K27ac ChIP-Seq"
+      ],
+      "biosample_term_name": "CD8-positive, alpha-beta T cell",
+      "dbxrefs": [],
+      "publications": []
+    }
+  ]
+}

@@ -6,9 +6,11 @@ function dega_bed_parser(line, index) {
     //  used for tabix queries) and a promoter that affects a gene (a string column with an ID)
     var fields = line.split('\t');
     var chrom = fields[0].replace('chr', '');
-
     // assume format chr1:123-456_GENE or chr1:123-456 (chr prefix optional)
     var second_item = fields[3].match(/^(?:chr)?(\d+):(\d+)-(\d+)(?:_)?(\S+)?$/);
+    var start_2 = parseInt(second_item[2]);
+    var end_2 = parseInt(second_item[3]);
+    var mid_point = start_2 + Math.round((Math.abs(end_2 - start_2))/2);
     var score = fields[4];
     score = (score === '.') ? 1 : +score;
     return {
@@ -19,6 +21,7 @@ function dega_bed_parser(line, index) {
         end1: +fields[2],
         start2: +second_item[2],
         end2: +second_item[3],
+	mid_point: mid_point,
         // Optional field: chromatin interaction files have it; coaccessibility files do not
         target: second_item[4] || null,
         score: score,

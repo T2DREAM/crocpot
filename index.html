@@ -48,7 +48,7 @@
       box-sizing: border-box;
     }
     .dropbtn {
-  background-color: #ffa726;
+  background-color: #4285f4;
   color: white;
   font-size: 12px;  
   border: none;
@@ -56,10 +56,10 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #eb9d2a;
+  background-color: #216deb;
 }
     .submit {
-  background-color: #ffa726;
+  background-color: #4285f4;
   color: white;
   font-size: 12px;
   border: none;
@@ -67,7 +67,7 @@
 }
 
 .submit:hover, .submit:focus {
-  background-color: #eb9d2a;
+  background-color: #216deb;
 }
 .Input {
   box-sizing: content-box;
@@ -83,7 +83,7 @@
 .Input:focus {outline: 3px solid #ddd;}
 
 .dropdown {
-    position: relative;
+    position: right;
     display: inline-block;
 }
 
@@ -117,9 +117,11 @@
 </head>
 
 <body>
-<div class="container">
-  <h3 style="margin-top: 1em;"><strong>CROCPOT</strong></h3>
-  <h6 style="float: left; color: #777">ChROmatin-based Collection of Predicted Target genes</h6>
+  <div class="container">
+    
+    <p style="float: left;"><img src="./crocpot.png" height="100px" width="130px" style="margin-right: 10px;"></p>
+    <h3 style="margin-top: 1em;"><strong>CROCPOT</strong></h3>
+    <h6 style="float: left; color: #777">ChROmatin-based Collection of Predicted Target genes</h6>
   <hr style="clear: both;">
   <table>
     <tr>
@@ -132,10 +134,10 @@
 	       <div id="study">
 	       </div>
     </div>
-    </div>
+	  </div>
       <div class="dropdown">
-	<button onclick="GWASFunction()" class="dropbtn" style="margin-left:50px">GWAS Studies</button>
-	<div id="GWASDropdown" class="dropdown-content">
+	<button onclick="GWASFunction()" class="dropbtn" style="margin-left:120px">Genome-wide Association Studies</button>
+	<div id="GWASDropdown" class="dropdown-content" style="margin-left:120px">
 	  <input type="text" placeholder="Search.." id="GWASInput" onkeyup="filterGWAS()" class="Input">
 	  <div id="gwas">
 	  </div>  
@@ -145,7 +147,7 @@
 </tr>
 <tr>
   <td>
-    <span><h6>Upload your Chromatin Study Track    <a href="http://www.apps.t2depigenome.org/crocpot-doc/tabix/" target="_blank">File format</a></h6></span>
+    <span><h6>Upload your Chromatin Study Track    <a href="../crocpot-doc/tabix/" target="_blank">File format</a></h6></span>
       <div class="inc">
         <div>
           <input type="text" placeholder="bed file url" style="min-width: 400px; font-size: 12px;" id="myTrack">
@@ -194,11 +196,12 @@
         .then(function(res) {
 	let results = res.chromatin;
 	var studies = document.getElementById("study");
+	
 	for (var i = 0; i < results.length; i++) {
-	(function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].chromatin_study, ["TabixUrlSource", {url_data: results[i].url,parser_func: dega_bed_parser,params: { overfetch:0.25 } }]); var panel_layout = LocusZoom.Layouts.get('panel', 'coaccessibility', {namespace: { access: results[i].chromatin_study }, title: { text: results[i].title }, id: results[i].chromatin_study, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
+	(function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].chromatin_study, ["TabixUrlSource", {url_data: results[i].url,parser_func: dega_bed_parser, params: { overfetch:0 }  }]); var panel_layout = LocusZoom.Layouts.get('panel', 'coaccessibility', {namespace: { access: results[i].chromatin_study }, title: { text: results[i].title }, id: results[i].chromatin_study, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
 	studies.appendChild(a);		    
-	}		
-	});
+	}
+	});			    
 	fetch("./gwas.json")
         .then(response => response.json())
         .then(function(res) {
@@ -214,43 +217,33 @@
     if (window.location.search.indexOf("offline") != -1) {
         online = false;
     }
-
     // Define LocusZoom Data Sources object differently depending on online status
-    var apiBase = "https://portaldev.sph.umich.edu/api/v1/";
+    var apiBase = "https://portaldev.sph.umich.edu/api/v1/";			    
     data_sources = new LocusZoom.DataSources()
         .add("ld", ["LDServer", { url: "https://portaldev.sph.umich.edu/ld/", params: { source: '1000G', build: 'GRCh37', population: 'ALL' } }])
         .add("recomb", ["RecombLZ", { url: apiBase + "annotation/recomb/results/", params: { build: 'GRCh37' } }])
         .add("gene", ["GeneLZ", { url: apiBase + "annotation/genes/", params: { build: 'GRCh37' } }])
         .add("constraint", ["GeneConstraintLZ", { url: "https://gnomad.broadinstitute.org/api", params: { build: 'GRCh37' } }]);
-
-    // Get the standard association plot layout from LocusZoom's built-in layouts
-    var stateUrlMapping = { chr: "chrom", start: "start", end: "end" };
+			    // Get the standard association plot layout from LocusZoom's built-in layouts
+    // var trackname = plot.panel_ids_by_y_index;			    
+    var stateUrlMapping = { chr: "chrom", start: "start", end: "end", trackname: "trackname" };
     // Fetch initial position from the URL, or use some defaults
     var initialState = LzDynamicUrls.paramsFromUrl(stateUrlMapping);
     if (!Object.keys(initialState).length) {
         initialState = { chr: 11, start: 2182049, end: 2904920 };
     }
-    // This creates a new configuration object
-    var extra_panel_layout_assoc_45 = LocusZoom.Layouts.get('panel', 'association_credible', {
-    namespace: { assoc: 'assoc_45', 'credset': 'credset_45', 'ld': 'ld' },
-    id: 'assoc_45',
-    title: { text: 'DIAGRAM 1000G T2D meta-analysis' },
-    y_index: -1 // Special option used by addPanel: inserts this study right before the genes track
-	});
     layout = LocusZoom.Layouts.get("plot", "coaccessibility", { state: initialState });
-    // var loop_panel = extra_panel_layout_DFF044MQE[0];
     // Generate the LocusZoom plot, and reflect the initial plot state in url
     window.plot = LocusZoom.populate("#lz-plot", data_sources, layout);
-
     // Changes in the plot can be reflected in the URL, and vice versa (eg browser back button can go back to
     //   a previously viewed region)
     LzDynamicUrls.plotUpdatesUrl(plot, stateUrlMapping);
     LzDynamicUrls.plotWatchesUrl(plot, stateUrlMapping);
-    
+    console.log(plot.panel_ids_by_y_index);
     // Add a basic loader to each panel (one that shows when data is requested and hides when one rendering)
     plot.layout.panels.forEach(function (panel) {
         plot.panels[panel.id].addBasicLoader();
-    });
+     });
     document.getElementById("button-jump").addEventListener("click", function(event) {
     jumpToRegion(window.plot, 'input-region', 'error-region')
     });
@@ -299,9 +292,8 @@ $.get("nav.html", function(data){
     // Add a basic loader to each panel (one that shows when data is requested and hides when one rendering)
     function addPanels(plot, data_sources) {
     url = document.getElementById("myTrack").value;
-    trackname = document.getElementById("myName").value;
-    data_sources.add(trackname, ["TabixUrlSource", {url_data: url,parser_func: dega_bed_parser,params: { overfetch:
-0.25 } }]);
+    trackname = document.getElementById("myName").value;			    
+    data_sources.add(trackname, ["TabixUrlSource", {url_data: url,parser_func: dega_bed_parser, params: { overfetch:0 } }]);
     var panel_layout = LocusZoom.Layouts.get('panel', 'coaccessibility', {namespace: { access: trackname }, title: { text: trackname }, id: trackname,y_index: -1});
     const panel = plot.addPanel(panel_layout);
     panel.addBasicLoader();

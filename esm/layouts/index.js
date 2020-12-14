@@ -89,7 +89,7 @@ const coaccessibility_tooltip = {
     html: '<strong>Regulatory element</strong><br>' +
         '{{{{namespace[access]}}start1|htmlescape}}-{{{{namespace[access]}}end1|htmlescape}}<br>' +
         '<strong>Promoter</strong><br>' +
-        '{{{{namespace[access]}}start2|htmlescape}}-{{{{namespace[access]}}end2|htmlescape}}<br>' +
+        '{{{{namespace[access]}}mid_point|htmlescape}}-{{{{namespace[access]}}end2|htmlescape}}<br>' +
         '{{#if {{namespace[access]}}target}}<strong>Target</strong>: {{{{namespace[access]}}target|htmlescape}}<br>{{/if}}' +
         '<strong>Score</strong>: {{{{namespace[access]}}score|htmlescape}}',
 };
@@ -269,7 +269,7 @@ const coaccessibility_layer = {
     namespace: { 'access': 'access' },
     id: 'coaccessibility',
     type: 'arcs',
-    fields: ['{{namespace[access]}}start1', '{{namespace[access]}}end1', '{{namespace[access]}}start2', '{{namespace[access]}}end2', '{{namespace[access]}}id', '{{namespace[access]}}target', '{{namespace[access]}}score'],
+    fields: ['{{namespace[access]}}start1', '{{namespace[access]}}end1', '{{namespace[access]}}start2', '{{namespace[access]}}end2', '{{namespace[access]}}id', '{{namespace[access]}}target', '{{namespace[access]}}score', '{{namespace[access]}}mid_point'],
     match: { send: '{{namespace[access]}}target', receive: '{{namespace[access]}}target' },
     id_field: '{{namespace[access]}}id',
     filters: [
@@ -282,7 +282,7 @@ const coaccessibility_layer = {
             scale_function: 'if',
             parameters: {
                 field_value: true,
-                then: '#ffa726',
+                then: '#4285f4',
             },
         },
         {
@@ -302,13 +302,12 @@ const coaccessibility_layer = {
     ],
     x_axis: {
         field1: '{{namespace[access]}}start1',
-        field2: '{{namespace[access]}}start2',
+        field2: '{{namespace[access]}}mid_point',
     },
     y_axis: {
         axis: 1,
         field: '{{namespace[access]}}score',
-        upper_buffer: 0.1,
-        min_extent: [0, 1],
+        floor: 0,
     },
     behaviors: {
         onmouseover: [
@@ -1003,7 +1002,7 @@ const coaccessibility_plot = {
                     scale_function: 'if',
                     parameters: {
                         field_value: true,
-                        then: '#ffa726',
+                        then: '#4285f4',
                     },
                 },
                 {
@@ -1022,7 +1021,7 @@ const coaccessibility_plot = {
         }(),
     ],
 };
-
+console.log(coaccessibility_plot);
 
 export const tooltip = {
     standard_association: standard_association_tooltip,

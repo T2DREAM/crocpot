@@ -1,3 +1,8 @@
 jsdoc/
 node_modules
 .nyc_output
+crocpot.json
+chromatin_data.json
+gwas_data.json
+gwas1.json
+gwas.json
