@@ -381,6 +381,47 @@ class AssociationLZ extends BaseApiAdapter {
 }
 
 /**
+ * Data Source for Association Data from the LocusZoom/ Portaldev API (or compatible). Defines how to make a requesr
+ * @public
+ */
+class eqtlLZ extends BaseApiAdapter {
+    preGetData (state, fields, outnames, trans) {
+        // TODO: Modify internals to see if we can go without this method
+        const id_field = this.params.id_field || 'id';
+        [id_field, 'position'].forEach(function(x) {
+            if (!fields.includes(x)) {
+                fields.unshift(x);
+                outnames.unshift(x);
+                trans.unshift(null);
+            }
+        });
+        return {fields: fields, outnames:outnames, trans:trans};
+    }
+
+    getURL (state, chain, fields) {
+        const analysis = chain.header.analysis || this.params.source || this.params.analysis;  // Old usages called this param "analysis"
+        if (typeof analysis == 'undefined') {
+            throw new Error('Association source must specify an analysis ID to plot');
+        }
+        return `${this.url}/?filter=analysis in ${analysis} and chromosome in  '${state.chr}' and position ge ${state.start} and position le ${state.end}`;
+    }
+
+    normalizeResponse (data) {
+        // Some association sources do not sort their data in a predictable order, which makes it hard to reliably
+        //  align with other sources (such as LD). For performance reasons, sorting is an opt-in argument.
+        // TODO: Consider more fine grained sorting control in the future. This was added as a very specific
+        //   workaround for the original T2D portal.
+        data = super.normalizeResponse(data);
+        if (this.params && this.params.sort && data.length && data[0]['position']) {
+            data.sort(function (a, b) {
+                return a['position'] - b['position'];
+            });
+        }
+        return data;
+    }
+}
+
+/**
  * Fetch linkage disequilibrium information from a UMich LDServer-compatible API
  *
  * This source is designed to connect its results to association data, and therefore depends on association data having
@@ -548,8 +589,15 @@ class LDServer extends BaseApiAdapter {
         if (!match) {
             throw new Error('Could not request LD for a missing or incomplete marker format');
         }
-        refVar = [match[1], ':', match[2], '_', match[3], '/', match[4]].join('');
-        chain.header.ldrefvar = refVar;
+        const [original, chrom, pos, ref, alt] = match;
+        // Currently, the LD server only accepts full variant specs; it won't return LD w/o ref+alt. Allowing
+        //  a partial match at most leaves room for potential future features.
+        refVar = `${chrom}:${pos}`;
+        if (ref && alt) {
+            refVar += `_${ref}/${alt}`;
+        }
+        // Preserve the user-provided variant spec for use when matching to assoc data
+        chain.header.ldrefvar = original;
 
         return  [
             this.url, 'genome_builds/', build, '/references/', source, '/populations/', population, '/variants',
@@ -875,8 +923,10 @@ class RecombLZ extends BaseApiAdapter {
 }
 
 /**
- * Data Source for static blobs of data as raw JS objects. This does not perform additional parsing, and it bypasses
- * namespaces. Therefore it is the responsibility of the user to pass information in a format that can be read and
+ * Data Source for static blobs of data as raw JS objects. This does not perform additional parsing, which is required
+ *  for some sources (eg when joining together LD and association data).
+ *
+ * Therefore it is the responsibility of the user to pass information in a format that can be read and
  * understood by the chosen plot- a StaticJSON source is rarely a drop-in replacement.
  *
  * This source is largely here for legacy reasons. More often, a convenient way to serve static data is as separate
@@ -1009,6 +1059,7 @@ export { BaseAdapter, BaseApiAdapter };
 
 export {
     AssociationLZ,
+    eqtlLZ,
     ConnectorSource,
     GeneConstraintLZ,
     GeneLZ,

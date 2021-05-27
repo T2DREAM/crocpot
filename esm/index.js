@@ -2,7 +2,7 @@
  * Compatibility layer: expose symbols via UMD module to match the old LocusZoom API
  * A library using this file will need to load `locuszoom.css` separately.
  */
-import {version} from '../package.json';
+import version from './version';
 
 import {default as DataSources} from './data';
 import { populate } from './helpers/display';
@@ -12,6 +12,7 @@ import {
     DATA_LAYERS as DataLayers,
     WIDGETS as Widgets,
     LAYOUTS as Layouts,
+    MATCHERS as MatchFunctions,
     SCALABLE as ScaleFunctions,
     TRANSFORMS as TransformationFunctions,
 } from './registry';
@@ -26,6 +27,7 @@ const LocusZoom = {
     Adapters,
     DataLayers,
     Layouts,
+    MatchFunctions,
     ScaleFunctions,
     TransformationFunctions,
     Widgets,

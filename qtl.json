@@ -1,0 +1,26 @@
+[
+    {
+	"analysis": 1,
+	"variant": "3:53909731_C/A",
+	"position": 53909731,
+	"gene_name": "ACTR8",
+	"chr": "3",
+	"pvalue": 4
+    },
+    {
+	"analysis": 1,
+	"variant": "3:53097410_T/A",
+	"chr": "3",
+	"position": 53097410,
+	"gene_name": "ALAS1",
+	"pvalue": 5
+    },
+    {
+	"analysis": 1,
+	"variant": "3:53138254_T/C",
+	"chr": "3",
+	"position": 53138254,
+	"gene_name": "RFT1",
+	"pvalue": 1
+    }
+]

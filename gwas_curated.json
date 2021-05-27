@@ -1,0 +1,522 @@
+{
+    "data": [
+	{
+            "type": "AnalysisInfo",
+            "id": "589560",
+            "created": "2019-12-26T09:55:35.738268Z",
+            "label": "AllLogistic",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/589560/data/",
+            "owner_name": "Emilio García Morán",
+            "is_public": true
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "459595",
+            "created": "2020-01-09T10:31:02.391853Z",
+            "label": "DIAGRAM_T2D",
+            "study_name": "DIAMANTE (European)meta-analysis of type 2 diabetes",
+            "pmid": "30297969",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/459595/data/",
+            "owner_name": "Holger Trucks",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "138554",
+            "created": "2020-01-29T18:34:47.844728Z",
+            "label": "UGT1A1 mQTL",
+            "study_name": "mQTL",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/138554/data/",
+            "owner_name": "Lucas Gillenwater",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "844282",
+            "created": "2020-02-12T02:27:40.182856Z",
+            "label": "brca gwas",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/844282/data/",
+            "owner_name": "Alan Selewa",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "357014",
+            "created": "2020-02-16T16:37:02.614620Z",
+            "label": "gwasPlink",
+            "study_name": "february",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/357014/data/",
+            "owner_name": "Emilio García Morán",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "993900",
+            "created": "2020-02-20T13:36:45.861680Z",
+            "label": "CRP NLRP3",
+            "study_name": "Ligthart",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/993900/data/",
+            "owner_name": "Arjen Cupido",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "809171",
+            "created": "2020-02-21T07:11:30.999021Z",
+            "label": "ADHD GWAS",
+            "study_name": "PGC",
+            "pmid": "30478444",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/809171/data/",
+            "owner_name": "Anu Shivalikanjli",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "947479",
+            "created": "2020-02-23T21:01:08.880755Z",
+            "label": "kidneyGWAS",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/947479/data/",
+            "owner_name": "Emilio García Morán",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "468791",
+            "created": "2020-02-23T21:05:30.618841Z",
+            "label": "endoGWAS",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/468791/data/",
+            "owner_name": "Emilio García Morán",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "305800",
+            "created": "2020-03-01T19:44:27.582093Z",
+            "label": "gwasPlinkPolished",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/305800/data/",
+            "owner_name": "Emilio García Morán",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "969915",
+            "created": "2020-03-03T20:20:01.923685Z",
+            "label": "Sitting Height Ratio GWAS",
+            "study_name": "dbGaP plus other cohorts",
+            "pmid": "25865494",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/969915/data/",
+            "owner_name": "Rigel Chan",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "980498",
+            "created": "2020-03-04T14:26:32.642548Z",
+            "label": "Sitting Height Ratio GWAS",
+            "study_name": "dbGaP plus other cohorts",
+            "pmid": "25865494",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/980498/data/",
+            "owner_name": "Rigel Chan",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "347360",
+            "created": "2020-03-13T04:08:40.786110Z",
+            "label": "BMI GWAS Filtered",
+            "study_name": "BMI GWAS Filtered",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/347360/data/",
+            "owner_name": "Mia Yang Ang",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "26682",
+            "created": "2020-04-23T16:19:06.531254Z",
+            "label": "chr15 - CAD",
+            "study_name": "Cardiogram (?)",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/26682/data/",
+            "owner_name": "Elizabeth Ha",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "607216",
+            "created": "2020-05-02T12:18:18.096619Z",
+            "label": "asd",
+            "study_name": "asd",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/607216/data/",
+            "owner_name": "Mateusz Siedlinski",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "521147",
+            "created": "2020-05-07T14:48:41.668956Z",
+            "label": "Trans-ethnic GFR",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/521147/data/",
+            "owner_name": "Matthew Lanktree",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "389563",
+            "created": "2020-05-07T15:09:45.637527Z",
+            "label": "Trans-ethnic GFR CFC1",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/389563/data/",
+            "owner_name": "Matthew Lanktree",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "227433",
+            "created": "2020-05-07T18:29:22.609167Z",
+            "label": "Trans-ethnic GFR Chr5",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/227433/data/",
+            "owner_name": "Matthew Lanktree",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "979702",
+            "created": "2020-05-21T16:48:51.799983Z",
+            "label": "JAK2",
+            "study_name": null,
+            "pmid": "27365426",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/979702/data/",
+            "owner_name": "Maryam Zekavat",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "812900",
+            "created": "2020-06-01T19:22:21.609668Z",
+            "label": "T2D Fine-mapped Loci",
+            "study_name": "DIAGRAM",
+            "pmid": "30297969",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/812900/data/",
+            "owner_name": "Yonathan Aberra",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "903855",
+            "created": "2020-06-18T19:43:19.655700Z",
+            "label": "Multiple sclerosis autosomal non-MHC",
+            "study_name": "IMSGC",
+            "pmid": "31604244",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/903855/data/",
+            "owner_name": "Lewis Scott",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "110227",
+            "created": "2020-07-04T14:58:59.576479Z",
+            "label": "Own BW GWAS - Non-European Significant SNPs",
+            "study_name": "EGC",
+            "pmid": "25123127",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/110227/data/",
+            "owner_name": "Christopher Shore",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "404523",
+            "created": "2020-07-07T14:28:32.543063Z",
+            "label": "Own BW GWAS - Non-European - SNPs p < 0.5",
+            "study_name": "EGC",
+            "pmid": "25123127",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/404523/data/",
+            "owner_name": "Christopher Shore",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "114481",
+            "created": "2020-07-15T15:03:10.520357Z",
+            "label": "DHEAS GWAS",
+            "study_name": null,
+            "pmid": "31169883",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/114481/data/",
+            "owner_name": "Maria Cecilia Lardone",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "344920",
+            "created": "2020-07-30T04:46:44.429446Z",
+            "label": "gecco",
+            "study_name": "gecco",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/344920/data/",
+            "owner_name": "Anna Shcherbina",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "255342",
+            "created": "2020-09-22T12:03:05.653260Z",
+            "label": "Birth Weight",
+            "study_name": "Genome-wide associations for birth weight and correlations with adult disease",
+            "pmid": "27680694",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/255342/data/",
+            "owner_name": "William Denault",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "936641",
+            "created": "2020-09-30T05:48:19.067380Z",
+            "label": "Hypertension GWAS in Chinese",
+            "study_name": "GeneID",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/936641/data/",
+            "owner_name": "xu chengqi",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "525823",
+            "created": "2020-10-16T02:40:39.225712Z",
+            "label": "Expanded mosaic chromosomal alteration (mCA) GWAS",
+            "study_name": "UK Biobank (Zekavat MedRxiv 2020)",
+            "pmid": "Zekavat MedRxiv 2020",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/525823/data/",
+            "owner_name": "Maryam Zekavat",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "842685",
+            "created": "2020-10-25T03:50:52.734527Z",
+            "label": "Pneumonia GWAS",
+            "study_name": "UKBB",
+            "pmid": "Zekavat_CellMed_2020",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/842685/data/",
+            "owner_name": "Maryam Zekavat",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "221948",
+            "created": "2020-10-26T20:10:32.302671Z",
+            "label": "ADD",
+            "study_name": null,
+            "pmid": "30617256",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/221948/data/",
+            "owner_name": "You Chen",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "676666",
+            "created": "2020-11-01T15:56:34.985269Z",
+            "label": "Eosinophil Counts BBJ",
+            "study_name": "Genetic analysis of quantitative traits in the Japanese population links cell types to complex human",
+            "pmid": "29403010",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/676666/data/",
+            "owner_name": "Amanda Cheng",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "167711",
+            "created": "2020-11-09T17:23:24.489499Z",
+            "label": "BioAge Acceleration GWAS",
+            "study_name": "Genetic associations for two biological age measures point to distinct aging phenotypes",
+            "pmid": "32676622",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/167711/data/",
+            "owner_name": "Chia-Ling Kuo",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "81280",
+            "created": "2020-11-09T19:38:19.258160Z",
+            "label": "PhenoAge Acceleration GWAS",
+            "study_name": "Genetic associations for two biological age measures point to distinct aging phenotypes",
+            "pmid": "32676622",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/81280/data/",
+            "owner_name": "Chia-Ling Kuo",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "53259",
+            "created": "2020-11-10T16:35:16.947362Z",
+            "label": "Mastocytosis GWAS",
+            "study_name": "KIT D816V",
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/53259/data/",
+            "owner_name": "Gabriella Galatà",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "982825",
+            "created": "2020-11-16T17:48:03.242143Z",
+            "label": "E2_WOMEN_META",
+            "study_name": "Pott et al",
+            "pmid": "31169883",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/982825/data/",
+            "owner_name": "Dr. Claudia Schurmann",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "482526",
+            "created": "2020-11-16T17:50:04.633178Z",
+            "label": "E2_ALL_META",
+            "study_name": "Pott et al",
+            "pmid": "31169883",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/482526/data/",
+            "owner_name": "Dr. Claudia Schurmann",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "950367",
+            "created": "2020-11-16T17:51:08.375469Z",
+            "label": "E2_MEN_META",
+            "study_name": "Pott et al",
+            "pmid": "31169883",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/950367/data/",
+            "owner_name": "Dr. Claudia Schurmann",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "81663",
+            "created": "2020-11-25T13:38:40.509755Z",
+            "label": "UKB-CAD (coronary artery disease)",
+            "study_name": "UKB + CARDIoGRAMplusC4D",
+            "pmid": "28714975",
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/81663/data/",
+            "owner_name": "Sander W. van der Laan",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "613365",
+            "created": "2020-12-10T19:23:43.337451Z",
+            "label": "SH3BGRL2.T1D_RA_Saige_FORG",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/613365/data/",
+            "owner_name": "sebastian akle",
+            "is_public": true
+
+        },
+        {
+            "type": "AnalysisInfo",
+            "id": "235930",
+            "created": "2020-12-10T19:42:05.120142Z",
+            "label": "SH3BGRL2.T1D",
+            "study_name": null,
+            "pmid": null,
+            "build": "GRCh37",
+            "url": "https://cors-anywhere.herokuapp.com/https://my.locuszoom.org/api/v1/gwas/235930/data/",
+            "owner_name": "sebastian akle",
+            "is_public": true
+        }
+    ]
+}

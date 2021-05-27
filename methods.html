@@ -5,14 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">  
-  <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+<link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet"/>
 <!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">  
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/2.2.1/mdb.min.css" rel="stylesheet"/>
   <!-- Necessary includes for LocusZoom.js -->
  <script src="https://cdn.jsdelivr.net/npm/d3@^5.16.0" type="text/javascript"></script>
  <script src="./dist/locuszoom.app.min.js" type="text/javascript"></script>
@@ -29,12 +27,11 @@
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="application/javascript" src="./dist/ext/lz-tabix-source.min.js"></script>
   <script src="./examples/js/coaccessibility.js" type="application/javascript"></script>
   <script src="./examples/js/region-search.js" type="application/javascript"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/2.2.1/mdb.min.js"></script>
   <title>CROCPOT</title>
 
   <style>
@@ -120,9 +117,9 @@ table.format tr td {
 </head>
 
 <body>
-<div class="container">
-  <h3 style="margin-top: 1em;"><strong>CROCPOT</strong></h3>
-  <h6 style="float: left; color: #777">ChROmatin-based Collection of Predicted Target genes</h6>
+  <div class="container">
+    <br>
+    <h5 style="float: left;"><strong>Pipelines for Chromatin Studies</strong></h5>
   <hr style="clear: both;">
   <div class="accordion" id="accordionExample">
   <div class="card">
@@ -328,6 +325,7 @@ CHiCAGO then performs a p-value weighting procedure based on the expected true p
   </div>
   <br>
   <br>
+  <hr style="clear: both;">
       <div class="row">
         <footer style="text-align: center;">
           &copy; Copyright <script>document.write(new Date().getFullYear())</script>  Regents of the University of California.<br>

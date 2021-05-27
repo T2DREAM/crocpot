@@ -32,6 +32,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="application/javascript" src="./dist/ext/lz-tabix-source.min.js"></script>
   <script src="./examples/js/coaccessibility.js" type="application/javascript"></script>
+  <script src="./examples/js/eqtl.js" type="application/javascript"></script>
   <script src="./examples/js/region-search.js" type="application/javascript"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
@@ -126,7 +127,7 @@
   <table>
     <tr>
       <td>
-	        <span><h6>Load Chromatin and GWAS studies from database</h6></span>
+	        <span><h6>Load Chromatin, QTL and GWAS studies from database</h6></span>
 	  <div class="dropdown">
 	    <button onclick="LongRangeDataFunction()" class="dropbtn">Chromatin Studies</button>
 	     <div id="LongRangeDataDropdown" class="dropdown-content">
@@ -135,6 +136,14 @@
 	       </div>
     </div>
 	  </div>
+      <div class="dropdown">
+	<button onclick="eqtlFunction()" class="dropbtn" style="margin-left:120px">eQTL Studies</button>
+	<div id="eqtlDropdown" class="dropdown-content" style="margin-left:120px">
+	  <input type="text" placeholder="Search.." id="eqtlInput" onkeyup="filtereqtl()" class="Input">
+	  <div id="eqtl">
+	  </div>  
+    </div>
+    </div>
       <div class="dropdown">
 	<button onclick="GWASFunction()" class="dropbtn" style="margin-left:120px">Genome-wide Association Studies</button>
 	<div id="GWASDropdown" class="dropdown-content" style="margin-left:120px">
@@ -201,17 +210,28 @@
 	(function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].chromatin_study, ["TabixUrlSource", {url_data: results[i].url,parser_func: dega_bed_parser, params: { overfetch:0 }  }]); var panel_layout = LocusZoom.Layouts.get('panel', 'coaccessibility', {namespace: { access: results[i].chromatin_study }, title: { text: results[i].title }, id: results[i].chromatin_study, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
 	studies.appendChild(a);		    
 	}
-	});			    
-	fetch("./gwas.json")
+	});
+        fetch("./gwas.json")
         .then(response => response.json())
         .then(function(res) {
-	let results = res.gwas;
-	var studies = document.getElementById("gwas");
+        let results = res.gwas;
+        var studies = document.getElementById("gwas");
+        for (var i = 0; i < results.length; i++) {
+        (function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].assoc_id, ["AssociationLZ", {url: "https://portaldev.sph.umich.edu/api/v1/statistic/single/", params: {  source: results[i].ids, id_field: "variant" } }]); data_sources.add(results[i].credset_id, ["CredibleSetLZ", {params: { fields: { log_pvalue: results[i].log }, threshold: 0.95, significance_threshold: 7.301 } }]); var panel_layout = LocusZoom.Layouts.get('panel', 'association_credible', {namespace: { assoc: results[i].assoc_id, 'credset': results[i].credset_id, 'ld': 'ld' }, title: { text: results[i].title }, id: results[i].assoc_id, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
+        studies.appendChild(a);
+        }
+        });			    
+	fetch("./eqtl.json")
+        .then(response => response.json())
+        .then(function(res) {
+	let results = res.eqtl;
+	var eqtl = document.getElementById("eqtl");
+	
 	for (var i = 0; i < results.length; i++) {
-	(function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].assoc_id, ["AssociationLZ", {url: "https://portaldev.sph.umich.edu/api/v1/statistic/single/", params: {  source: results[i].ids, id_field: "variant" } }]); data_sources.add(results[i].credset_id, ["CredibleSetLZ", {params: { fields: { log_pvalue: results[i].log }, threshold: 0.95 } }]); var panel_layout = LocusZoom.Layouts.get('panel', 'association_credible', {namespace: { assoc: results[i].assoc_id, 'credset': results[i].credset_id, 'ld': 'ld' }, title: { text: results[i].title }, id: results[i].assoc_id, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
-	studies.appendChild(a);		    
-	}		
-	});
+	(function(i) { a = document.createElement("a"); a.className = "dropdown-item"; a.innerHTML = results[i].title; a.onclick = function () {data_sources.add(results[i].eqtl_study, ["TabixUrlSource", {url_data: results[i].url,parser_func: eqtl_bed_parser, params: { overfetch:0 }  }]); var panel_layout = LocusZoom.Layouts.get('panel', 'eqtl', {namespace: { eqtl: results[i].eqtl_study }, title: { text: results[i].title }, id: results[i].eqtl_study, y_index: -1}); const panel = plot.addPanel(panel_layout); panel.addBasicLoader();}}(i));
+	eqtl.appendChild(a);		    
+	}
+	});			    
     // Determine if we're online, based on browser state or presence of an optional query parameter
     var online = !(typeof navigator != "undefined" && !navigator.onLine);
     if (window.location.search.indexOf("offline") != -1) {
@@ -222,7 +242,7 @@
     data_sources = new LocusZoom.DataSources()
         .add("ld", ["LDServer", { url: "https://portaldev.sph.umich.edu/ld/", params: { source: '1000G', build: 'GRCh37', population: 'ALL' } }])
         .add("recomb", ["RecombLZ", { url: apiBase + "annotation/recomb/results/", params: { build: 'GRCh37' } }])
-        .add("gene", ["GeneLZ", { url: apiBase + "annotation/genes/", params: { build: 'GRCh37' } }])
+	.add("gene", ["GeneLZ", { url: apiBase + "annotation/genes/", params: { build: 'GRCh37' } }])
         .add("constraint", ["GeneConstraintLZ", { url: "https://gnomad.broadinstitute.org/api", params: { build: 'GRCh37' } }]);
 			    // Get the standard association plot layout from LocusZoom's built-in layouts
     // var trackname = plot.panel_ids_by_y_index;			    
@@ -285,7 +305,26 @@ function filterGWAS() {
       a[i].style.display = "none";
     }
   }
-      }
+}			    
+function eqtlFunction() {
+  document.getElementById("eqtlDropdown").classList.toggle("show");
+}
+
+function filtereqtl() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("eqtlInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("eqtlDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
 $.get("nav.html", function(data){
     $("#nav-placeholder").replaceWith(data);
       });

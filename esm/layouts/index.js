@@ -4,7 +4,7 @@
  * @private
  */
 
-import { version } from '../../package.json';
+import version from '../version';
 import {deepCopy, merge} from '../helpers/layouts';
 
 const LZ_SIG_THRESHOLD_LOGP = 7.301; // -log10(.05/1e6)
@@ -39,7 +39,16 @@ const association_credible_set_tooltip = {
                  data.getDataLayer().makeLDReference(data);"
                  >Make LD Reference</a><br>`,
 };
-
+const eqtl_tooltip = {
+    namespace: { 'eqtl': 'eqtl' },
+    closable: true,
+    show: { or: ['highlighted', 'selected'] },
+    hide: { and: ['unhighlighted', 'unselected'] },
+    html: `<strong>{{{{namespace[eqtl]}}variant|htmlescape}}</strong><br><br>
+        P Value: <strong>{{{{namespace[eqtl]}}pvalue|logtoscinotation|htmlescape}}</strong><br>
+        Gene: <strong>{{{{namespace[eqtl]}}gene_name|htmlescape}}</strong><br>
+        Effect Size: <strong>{{{{namespace[eqtl]}}effect_size|htmlescape}}</strong><br>`,
+};
 const standard_association_tooltip_with_label = function() {
     // Add a special "toggle label" button to the base tooltip. This must be used in tandem with a custom layout
     //   directive (label.filters should check a boolean annotation field called "lz_show_label").
@@ -129,6 +138,9 @@ const association_pvalues_layer = {
     namespace: { 'assoc': 'assoc', 'ld': 'ld' },
     id: 'associationpvalues',
     type: 'scatter',
+    coalesce: {
+        active: true,
+    },
     point_shape: {
         scale_function: 'if',
         field: '{{namespace[ld]}}isrefvar',
@@ -199,11 +211,80 @@ const association_pvalues_layer = {
         onclick: [
             { action: 'toggle', status: 'selected', exclusive: true },
         ],
-        onshiftclick: [
-            { action: 'toggle', status: 'selected' },
-        ],
     },
     tooltip: deepCopy(standard_association_tooltip),
+};
+const eqtl_layer = {
+    namespace: { 'eqtl': 'eqtl' },
+    id: 'eqtl',
+    type: 'scatter',
+    fill_opacity: 0.7,
+    responsive_resize: true,
+    fields: ['{{namespace[eqtl]}}variant', '{{namespace[eqtl]}}position', '{{namespace[eqtl]}}pvalue|neglog10', '{{namespace[eqtl]}}gene_name', '{{namespace[eqtl]}}effect_size'],
+    id_field: '{{namespace[eqtl]}}variant',
+    z_index: 2,
+    filters: [
+        { field: '{{namespace[eqtl]}}pvalue|neglog10', operator: '!=', value: null },
+    ],
+    match: { send: '{{namespace[eqtl]}}gene_name', receive: '{{namespace[eql]}}gene_name' },
+    x_axis: {
+        field: '{{namespace[eqtl]}}position',
+    },
+    y_axis: {
+        axis: 1,
+        field: '{{namespace[eqtl]}}pvalue|neglog10',
+        floor: 0,
+    },
+    point_size: [
+        {
+            scale_function: 'if',
+            field: 'lz_is_match',
+            parameters: {
+                field_value: true,
+                then: 40,
+            },
+        },
+        {
+            scale_function: 'if',
+            field: 'lz_is_match',
+            parameters: {
+                field_value: false,
+                then: 0,
+            },
+        },
+        40,
+    ],
+    color: [
+        {
+            field: 'lz_is_match',
+            scale_function: 'if',
+            parameters: {
+                field_value: true,
+                then: '#4285f4',
+            },
+        },
+        {
+            field: 'lz_is_match',
+            scale_function: 'if',
+            parameters: {
+                field_value: false,
+                then: 'rgba(192,192,192,0.2)',
+            },
+        },
+        '#B54747',
+    ],
+    behaviors: {
+        onmouseover: [
+            { action: 'set', status: 'highlighted' },
+        ],
+        onmouseout: [
+            { action: 'unset', status: 'highlighted' },
+        ],
+        onclick: [
+            { action: 'toggle', status: 'selected', exclusive: true },
+        ],
+    },
+    tooltip: deepCopy(eqtl_tooltip),
 };
 const association_credible_set_layer = {
     namespace: { 'assoc': 'assoc', 'credset': 'credset', 'ld': 'ld' },
@@ -259,9 +340,6 @@ const association_credible_set_layer = {
         onclick: [
             { action: 'toggle', status: 'selected', exclusive: true },
         ],
-        onshiftclick: [
-            { action: 'toggle', status: 'selected' },
-        ],
     },
     tooltip: deepCopy(association_credible_set_tooltip),
 };
@@ -278,7 +356,7 @@ const coaccessibility_layer = {
     tooltip: deepCopy(coaccessibility_tooltip),
     color: [
         {
-            field: 'lz_highlight_match', // Special field name whose presence triggers custom rendering
+            field: 'lz_is_match', // Special field name whose presence triggers custom rendering
             scale_function: 'if',
             parameters: {
                 field_value: true,
@@ -286,7 +364,7 @@ const coaccessibility_layer = {
             },
         },
         {
-            field: 'lz_highlight_match', // Special field name whose presence triggers custom rendering
+            field: 'lz_is_match', // Special field name whose presence triggers custom rendering
             scale_function: 'if',
             parameters: {
                 field_value: false,
@@ -318,9 +396,6 @@ const coaccessibility_layer = {
         ],
         onclick: [
             { action: 'toggle', status: 'selected', exclusive: true },
-        ],
-        onshiftclick: [
-            { action: 'toggle', status: 'selected' },
         ],
     },
     //tooltip: deepCopy(coaccessibility_tooltip),
@@ -386,12 +461,9 @@ const phewas_pvalues_layer = {
         onclick: [
             { action: 'toggle', status: 'selected', exclusive: true },
         ],
-        onshiftclick: [
-            { action: 'toggle', status: 'selected' },
-        ],
     },
     label: {
-        text: '{{{{namespace[phewas]}}trait_label|htmlescape}}',
+        text: '{{{{namespace[phewas]}}trait_label}}',
         spacing: 6,
         lines: {
             style: {
@@ -430,9 +502,6 @@ const genes_layer = {
         ],
         onclick: [
             { action: 'toggle', status: 'selected', exclusive: true },
-        ],
-        onshiftclick: [
-            { action: 'toggle', status: 'selected' },
         ],
     },
     tooltip: deepCopy(standard_genes_tooltip),
@@ -481,9 +550,6 @@ const annotation_catalog_layer = {
         ],
         onclick: [
             { action: 'toggle', status: 'selected', exclusive: true },
-        ],
-        onshiftclick: [
-            { action: 'toggle', status: 'selected' },
         ],
     },
     tooltip: deepCopy(catalog_variant_tooltip),
@@ -687,6 +753,66 @@ const association_panel = {
         deepCopy(association_pvalues_layer),
     ],
 };
+const eqtl_panel = {
+    id: 'eqtl',
+    width: 800,
+    height: 225,
+    min_width: 400,
+    min_height: 200,
+    proportional_width: 1,
+    margin: { top: 35, right: 50, bottom: 40, left: 50 },
+    inner_border: 'rgb(210, 210, 210)',
+    toolbar: (function () {
+        const base = deepCopy(standard_panel_toolbar);
+        base.widgets.push(
+            {
+                type: 'filter_field',
+                layer_name: 'eqtl',
+                field: '{{namespace[eqtl]}}pvalue|neglog10',
+                field_display_html: 'PValue -log10',
+                operator: '>=',
+                position: 'right',
+                data_type: 'number',
+            },
+            {
+                type: 'menu',
+                color: 'blue',
+                button_html: 'DGA Dataset',
+                position: 'right',
+            }
+        );
+        return base;
+    })(),
+    axes: {
+        x: {
+            label: 'Chromosome {{chr}} (Mb)',
+            label_offset: 32,
+            tick_format: 'region',
+            extent: 'state',
+        },
+        y1: {
+            label: '-log10 p-value',
+            label_offset: 28,
+        },
+    },
+    legend: {
+        orientation: 'vertical',
+        origin: { x: 55, y: 40 },
+        hidden: true,
+    },
+    interaction: {
+        drag_background_to_pan: true,
+        drag_x_ticks_to_scale: true,
+        drag_y1_ticks_to_scale: true,
+        drag_y2_ticks_to_scale: true,
+        scroll_to_zoom: true,
+        x_linked: true,
+    },
+    data_layers: [
+        deepCopy(significance_layer),
+        deepCopy(eqtl_layer),
+    ],
+};
 const association_credible_set_panel = {
     id: 'associationcrediblesets',
     width: 800,
@@ -730,6 +856,7 @@ const association_credible_set_panel = {
         x_linked: true,
     },
     data_layers: [
+        deepCopy(significance_layer),
         deepCopy(association_credible_set_layer),
     ],
 };
@@ -804,7 +931,7 @@ const association_catalog_panel = function () {
                 display_name: 'Label catalog traits',  // Human readable representation of field name
                 display: {  // Specify layout directives that control display of the plot for this option
                     label: {
-                        text: '{{{{namespace[catalog]}}trait|htmlescape}}',
+                        text: '{{{{namespace[catalog]}}trait}}',
                         spacing: 6,
                         lines: {
                             style: {
@@ -998,7 +1125,7 @@ const coaccessibility_plot = {
             layer.match = { send: 'gene_name', receive: 'gene_name' };
             const color_config = [
                 {
-                    field: 'lz_highlight_match', // Special field name whose presence triggers custom rendering
+                    field: 'lz_is_match', // Special field name whose presence triggers custom rendering
                     scale_function: 'if',
                     parameters: {
                         field_value: true,
@@ -1006,7 +1133,7 @@ const coaccessibility_plot = {
                     },
                 },
                 {
-                    field: 'lz_highlight_match', // Special field name whose presence triggers custom rendering
+                    field: 'lz_is_match', // Special field name whose presence triggers custom rendering
                     scale_function: 'if',
                     parameters: {
                         field_value: false,
@@ -1051,6 +1178,7 @@ export const data_layer = {
     association_pvalues_catalog: association_pvalues_catalog_layer,
     phewas_pvalues: phewas_pvalues_layer,
     genes: genes_layer,
+    eqtl: eqtl_layer,
     genes_filtered: genes_layer_filtered,
     annotation_catalog: annotation_catalog_layer,
 };
@@ -1061,6 +1189,7 @@ export const panel = {
     coaccessibility: coaccessibility_panel,
     association_catalog: association_catalog_panel,
     genes: genes_panel,
+    eqtl: eqtl_panel,
     phewas: phewas_panel,
     annotation_catalog: annotation_catalog_panel,
 };

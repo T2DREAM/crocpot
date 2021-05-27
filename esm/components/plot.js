@@ -329,7 +329,7 @@ class Plot {
                 //  when re-emitting the event to plot-level listeners
                 eventContext = eventData;
             } else {
-                eventContext = {sourceID: sourceID, data: eventData || null};
+                eventContext = {sourceID: sourceID, target:this, data: eventData || null};
             }
             // By default, any handlers fired here (either directly, or bubbled) will see the plot as the
             //  value of `this`. If a bound function is registered as a handler, the previously bound `this` will
@@ -545,7 +545,7 @@ class Plot {
         const listener = () => {
             try {
                 this.lzd.getData(this.state, fields)
-                    .then((new_data) => success_callback(opts.discrete ? new_data.discrete : new_data.body))
+                    .then((new_data) => success_callback(opts.discrete ? new_data.discrete : new_data.body, this))
                     .catch(error_callback);
             } catch (error) {
                 // In certain cases, errors are thrown before a promise can be generated, and LZ error display seems to rely on these errors bubbling up

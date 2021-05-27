@@ -1,0 +1,19 @@
+{
+    "eqtl": [
+	{
+        "eqtl_study": "DSR023QMR",
+        "url": "https://locuszoom.s3-us-west-2.amazonaws.com/DFF860FCY_sorted.bed.gz",
+        "title": "islets of langerhans(DSR023QMR)"
+	},
+	{
+        "eqtl_study": "DSR965YTD",
+        "url": "https://locuszoom.s3-us-west-2.amazonaws.com/DFF831WIS_sorted.bed.gz",
+        "title": "subcutaneous adipose tissue(DSR965YTD)"
+	},
+	{
+        "eqtl_study": "DSR337DSV",
+        "url": "https://locuszoom.s3-us-west-2.amazonaws.com/DFF928RVK_sorted.bed.gz",
+        "title": "subcutaneous adipose tissue(DSR337DSV)"
+	}
+    ]
+}

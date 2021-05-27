@@ -1,7 +1,8 @@
 import {assert} from 'chai';
 import * as d3 from 'd3';
+import sinon from 'sinon';
 
-import { SCALABLE } from '../../../esm/registry';
+import { MATCHERS, SCALABLE } from '../../../esm/registry';
 import BaseDataLayer from '../../../esm/components/data_layer/base';
 import {populate} from '../../../esm/helpers/display';
 import DataSources from '../../../esm/data';
@@ -195,7 +196,7 @@ describe('LocusZoom.DataLayer', function () {
                 ],
             };
             const datalayer = new BaseDataLayer(layout);
-            datalayer.setElementAnnotation('toto', 'custom_field', 'little_dog');
+            datalayer.setElementAnnotation({id: 'toto'}, 'custom_field', 'little_dog');
             assert.equal(datalayer.resolveScalableParameter(layout.scale, { id: 'toto' }), 'too');
         });
     });
@@ -584,9 +585,8 @@ describe('LocusZoom.DataLayer', function () {
         });
     });
 
-    describe('Tool tip functions', function () {
+    describe('Tool tip display', function () {
         beforeEach(function () {
-            this.plot = null;
             this.layout = {
                 panels: [
                     {
@@ -671,7 +671,6 @@ describe('LocusZoom.DataLayer', function () {
             d.unselectElement(b);
             assert.isUndefined(d.tooltips[b_id]);
         });
-
         it('should allow tooltip open/close state to be tracked separately from element selection', function () {
             // Regression test for zombie tooltips returning after re-render
             const layer = this.plot.panels.p.data_layers.d;
@@ -709,9 +708,99 @@ describe('LocusZoom.DataLayer', function () {
         });
     });
 
+    describe('data element behaviors', function () {
+        beforeEach(function() {
+            const data_sources = new DataSources()
+                .add('d', ['StaticJSON', [{ id: 'a', x: 1, y: 2 }, { id: 'b', x: 2, y:0 }, { id: 'c', x: 3, y:1 }]]);
+
+            const layout = {
+                panels: [
+                    {
+                        id: 'p',
+                        data_layers: [
+                            {
+                                id: 'd',
+                                type: 'scatter',
+                                fields: ['d:id', 'd:x', 'd:y'],
+                                id_field: 'd:id',
+                                x_axis: { field:  'd:x' },
+                                y_axis: { field: 'd:y'},
+                                behaviors: {
+                                    onclick: [{ action: 'link', href: 'https://dev.example/{{d:id}}', target: '_blank' }],
+                                    onmouseover: [{ action: 'set', status: 'highlighted', exclusive: true }],
+                                    onmouseout: [{ action: 'unset', status: 'highlighted' }],
+                                    onshiftclick: [{ action: 'toggle', status: 'selected' }],
+                                },
+                            },
+                        ],
+                    },
+                ],
+            };
+            d3.select('body').append('div').attr('id', 'plot');
+            this.plot = populate('#plot', data_sources, layout);
+        });
+        it('can link to an external website', function () {
+            // NOTE: Not all variants of this behavior are tested. This only tests opening links in another window.
+            //  This is because JSDom sometimes has issues mocking window.location.
+            return this.plot.applyState().then(() => {
+                const openStub = sinon.stub(window, 'open');
+
+                // Select the first data element
+                const datapoint = this.plot.panels.p.data_layers.d.svg.group.select('.lz-data_layer-scatter');
+
+                assert.notEqual(datapoint.size(), 0, 'nodes are rendered');
+                datapoint.dispatch('click', { bubbles: true} );
+
+                assert.ok(openStub.calledOnce, 'window.open was called with the specified location and target');
+                assert.ok(openStub.calledWith('https://dev.example/a', '_blank'), 'The URL can incorporate parameters from the specified data element');
+            });
+        });
+        it('applies status-based styles when an item receives mouse events', function () {
+            // Since sequence is important, this test exercises multiple scenarios in a specific order
+            return this.plot.applyState().then(() => {
+                // Select the first and second data points
+                const first = this.plot.panels.p.data_layers.d.svg.group.select('.lz-data_layer-scatter');
+                const second = this.plot.panels.p.data_layers.d.svg.group.selectAll('.lz-data_layer-scatter').filter((d, i) => i === 1);
+
+                assert.notEqual(first.size(), 0, 'nodes are rendered');
+                assert.notEqual(second.size(), 0, 'nodes are rendered');
+                first.dispatch('mouseover', { bubbles: true} );
+
+                assert.ok(first.node().classList.contains('lz-data_layer-scatter-highlighted'), 'Style is applied appropriately');
+                assert.notOk(second.node().classList.contains('lz-data_layer-scatter-highlighted'), 'Style is only applied to the requested node');
+
+                // When a different element receives mouseover, check that exclusivity and styling are applied correctly
+                second.dispatch('mouseover', { bubbles: true} );
+                assert.notOk(first.node().classList.contains('lz-data_layer-scatter-highlighted'), 'Style is removed from other nodes');
+                assert.ok(second.node().classList.contains('lz-data_layer-scatter-highlighted'), 'Style is applied to the new mouseover node');
+
+                // On mouse out, styles are removed
+                second.dispatch('mouseout', { bubbles: true} );
+                assert.notOk(second.node().classList.contains('lz-data_layer-scatter-highlighted'), 'Style is removed on mouseout');
+            });
+        });
+        it('recognizes keyboard modifiers as distinct events', function () {
+            return this.plot.applyState().then(() => {
+                const openStub = sinon.stub(window, 'open');
+
+                // Select the first data element
+                const datapoint = this.plot.panels.p.data_layers.d.svg.group.select('.lz-data_layer-scatter');
+
+                assert.notEqual(datapoint.size(), 0, 'nodes are rendered');
+                datapoint.node().dispatchEvent(new MouseEvent('click', {bubbles: true, shiftKey: true}));
+
+                assert.ok(openStub.notCalled, 'The basic click event did not fire because a modifier key was used');
+                assert.ok(datapoint.node().classList.contains('lz-data_layer-scatter-selected'), 'Style is applied appropriately');
+            });
+        });
+        afterEach(function () {
+            sinon.restore();
+        });
+    });
+
     describe('Filtering operations', function () {
         it('can filter numeric data', function () {
-            const layer = new BaseDataLayer({id_field: 'a'});
+            const layer = new BaseDataLayer({id: 'test', id_field: 'a'});
             const options = [{ field: 'a', operator: '>', value: 12 }];
             const data = [{ a: 12 }, { a: 11 }, { a: 13 }];
 
@@ -738,6 +827,41 @@ describe('LocusZoom.DataLayer', function () {
             const result = data.filter(layer.filter.bind(layer, options));
             assert.equal(result.length, 1);
             assert.deepEqual(result, [{ a: 'exact' }]);
+        });
+
+        it('can work with user-specified filters', function () {
+            MATCHERS.add('near_to', (a, b) => a < (b + 100) && a > (b - 100));
+            const layer = new BaseDataLayer({id_field: 'a'});
+            const options = [{ field: 'a', operator: 'near_to', value: 200 }];
+            const data = [{ a: 50 }, { a: 200 }, { a: 250 }];
+
+            const result = data.filter(layer.filter.bind(layer, options));
+            assert.equal(result.length, 2);
+            assert.deepEqual(result, [{ a: 200 }, {a: 250 }]);
+
+            MATCHERS.remove('near_to');
+        });
+
+        it('can use transformed field values with filter rules', function() {
+            const layer = new BaseDataLayer({id_field: 'a'});
+            const options = [{ field: 'a|scinotation', operator: '=', value: '1.000' }];
+            const data = [{ a: 1 }, { a: 0 }, { a: 1 }];
+
+            const result = data.filter(layer.filter.bind(layer, options));
+            assert.equal(result.length, 2);
+            // Note that transform results are cached, so they will show up in the internal representation of the data
+            //  after fetching
+            assert.deepEqual(result, [{ a: 1, 'a|scinotation': '1.000' }, { a: 1, 'a|scinotation': '1.000' }]);
+        });
+
+        it('throws an error when an unrecognized filter is specified', function () {
+            const layer = new BaseDataLayer({id_field: 'a'});
+            const options = [{ field: 'a', operator: 'doesnotexist', value: 200 }];
+            const data = [{ a: 50 }, { a: 200 }, { a: 250 }];
+
+            assert.throws(() => {
+                data.filter(layer.filter.bind(layer, options));
+            }, 'Item not found: doesnotexist');
         });
 
         describe('interaction with data fetching', function () {
@@ -858,16 +982,16 @@ describe('LocusZoom.DataLayer', function () {
         it('can store user-defined marks for points that persist across re-renders', function () {
             const data_layer = this.plot.panels.p.data_layers.d;
             // Set the annotation for a point with id value of "a"
-            data_layer.setElementAnnotation('a', 'custom_field', 'some_value');
+            data_layer.setElementAnnotation({'d:id': 'a'}, 'custom_field', 'some_value');
 
             // Find the element annotation for this point via several different ways
             assert.equal(data_layer.layer_state.extra_fields['plot_p_d-a']['custom_field'], 'some_value', 'Found in internal storage (as elementID)');
-            assert.equal(data_layer.getElementAnnotation('a', 'custom_field'), 'some_value', 'Found via helper method (from id_field)');
-            assert.equal(data_layer.getElementAnnotation('b', 'custom_field'), null, 'If no annotation found, returns null. Annotation does not return actual field values.');
+            assert.equal(data_layer.getElementAnnotation({'d:id': 'a'}, 'custom_field'), 'some_value', 'Found via helper method (from id_field)');
+            assert.equal(data_layer.getElementAnnotation({'d:id': 'b'}, 'custom_field'), null, 'If no annotation found, returns null. Annotation does not return actual field values.');
             assert.equal(data_layer.getElementAnnotation({'d:id': 'a'}, 'custom_field'), 'some_value', 'Found via helper method (as data object)');
 
             return this.plot.applyState().then(function() {
-                assert.equal(data_layer.getElementAnnotation('a', 'custom_field'), 'some_value', 'Annotations persist across renderings');
+                assert.equal(data_layer.getElementAnnotation({'d:id': 'a'}, 'custom_field'), 'some_value', 'Annotations persist across renderings');
             });
         });
 
@@ -875,12 +999,12 @@ describe('LocusZoom.DataLayer', function () {
             const self = this;
             const data_layer = this.plot.panels.p.data_layers.d;
             assert.equal(data_layer.label_groups, undefined, 'No labels on first render');
-            data_layer.setElementAnnotation('a', 'custom_field', true);
+            data_layer.setElementAnnotation({'d:id': 'a'}, 'custom_field', true);
 
             return this.plot.applyState().then(function () {
                 assert.equal(data_layer.label_groups.size(), 1, 'Labels are drawn because of annotations');
                 // After turning labels on, confirm that we can cycle them off and influence rendering
-                data_layer.setElementAnnotation('a', 'custom_field', false);
+                data_layer.setElementAnnotation({'d:id': 'a'}, 'custom_field', false);
                 return self.plot.applyState();
             }).then(function () {
                 assert.equal(data_layer.label_groups.size(), 0, 'Labels are removed because of annotations');
@@ -896,7 +1020,7 @@ describe('LocusZoom.DataLayer', function () {
             return this.plot.applyState().then(function () {
                 assert.equal(data_layer.label_groups.size(), 1, 'Labels are drawn on first render because field value says to');
                 // Introduce an annotation that conflicts with the data field from the API
-                data_layer.setElementAnnotation('b', 'd:some_field', false);
+                data_layer.setElementAnnotation({'d:id': 'b'}, 'd:some_field', false);
                 return self.plot.applyState();
             }).then(function () {
                 assert.equal(data_layer.label_groups.size(), 1, 'Real fields says to label, annotation says no. Real field wins.');

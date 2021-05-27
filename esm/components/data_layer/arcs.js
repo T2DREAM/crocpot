@@ -57,38 +57,38 @@ class Arcs extends BaseDataLayer {
         }
 
         // Draw real lines, and also invisible hitareas for easier mouse events
-        const selection = this.svg.group
-            .selectAll('path.lz-data_layer-arcs')
-            .data(track_data, (d) => this.getElementId(d));
-
         const hitareas = this.svg.group
             .selectAll('path.lz-data_layer-arcs-hitarea')
             .data(track_data, (d) => this.getElementId(d));
 
-        // Add new points as necessary
-        selection
-            .enter()
-            .append('path')
-            .attr('class', 'lz-data_layer-arcs')
-            .attr('id', (d) => this.getElementId(d))
-            .merge(selection)
-            .attr('stroke', (d, i) => this.resolveScalableParameter(this.layout.color, d, i))
-            .attr('d', (d, i) => _make_line(d))
+        const selection = this.svg.group
+            .selectAll('path.lz-data_layer-arcs')
+            .data(track_data, (d) => this.getElementId(d));
+
+        this.svg.group
             .call(applyStyles, layout.style);
 
         hitareas
             .enter()
             .append('path')
             .attr('class', 'lz-data_layer-arcs-hitarea')
-            .attr('id', (d) => this.getElementId(d))
             .merge(hitareas)
+            .attr('id', (d) => this.getElementId(d))
             .style('fill', 'none')
             .style('stroke-width', layout.hitarea_width)
             .style('stroke-opacity', 0)
             .style('stroke', 'transparent')
-            .attr('d', (d) => _make_line(d))
-            // Apply mouse behaviors to hitareas
-            .call(this.applyBehaviors.bind(this));
+            .attr('d', (d) => _make_line(d));
+
+        // Add new points as necessary
+        selection
+            .enter()
+            .append('path')
+            .attr('class', 'lz-data_layer-arcs')
+            .merge(selection)
+            .attr('id', (d) => this.getElementId(d))
+            .attr('stroke', (d, i) => this.resolveScalableParameter(this.layout.color, d, i))
+            .attr('d', (d, i) => _make_line(d));
 
         // Remove old elements as needed
         selection.exit()
@@ -96,6 +96,11 @@ class Arcs extends BaseDataLayer {
 
         hitareas.exit()
             .remove();
+
+        // Apply mouse behaviors to arcs
+        this.svg.group
+            .call(this.applyBehaviors.bind(this));
+
         return this;
     }
 
@@ -107,6 +112,7 @@ class Arcs extends BaseDataLayer {
 
         const x1 = tooltip.data[layout.x_axis.field1];
         const x2 = tooltip.data[layout.x_axis.field2];
+
         const y_scale = panel[`y${layout.y_axis.axis}_scale`];
 
         return {
